@@ -1,0 +1,62 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/.idea
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# Pour angular
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+
+/public/angular/tmp
+/public/angular/out-tsc
+# Only exists if Bazel was run
+/public/angular/bazel-out
+
+# dependencies
+/public/angular/node_modules
+
+# profiling files
+/public/angular/chrome-profiler-events*.json
+/public/angular/speed-measure-plugin*.json
+
+# IDEs and editors
+/public/angular/.idea
+/public/angular/.project
+/public/angular/.classpath
+/public/angular/.c9/
+/public/angular/*.launch
+/public/angular/.settings/
+/public/angular/*.sublime-workspace
+
+# IDE - VSCode
+/public/angular/.vscode/*
+/public/angular/!.vscode/settings.json
+/public/angular/!.vscode/tasks.json
+/public/angular/!.vscode/launch.json
+/public/angular/!.vscode/extensions.json
+/public/angular/.history/*
+
+# misc
+/public/angular/.sass-cache
+/public/angular/connect.lock
+/public/angular/coverage
+/public/angular/libpeerconnection.log
+/public/angular/npm-debug.log
+/public/angular/yarn-error.log
+/public/angular/testem.log
+/public/angular/typings
+
+# System Files
+/public/angular/.DS_Store
+/public/angular/Thumbs.db
