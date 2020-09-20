@@ -1,4 +1,4 @@
-###Welcome on Larangular.
+### Welcome on Larangular.
 
 A project that combine Laravel and angular together.
 
