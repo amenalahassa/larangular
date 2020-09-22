@@ -27,4 +27,8 @@ export class AppComponent {
     this.passed = this.mypipe.transform(this.time)
 
   }
+
+  show (text : string) {
+    alert(text)
+  }
 }

@@ -1,9 +1,14 @@
 <div class="welcome">
-  <p>Welcome on  {{ title }}</p>
-  <p>It is : {{ time }} </p>
-  <p>
-    <span> {{ passed }} time pass since the component is mounted</span>
+  <div>
+    <p>Welcome on  {{ title }}</p>
+    <p>It is : {{ time }} </p>
+    <p>
+      <span> {{ passed }} time pass since the component is mounted</span>
 
-    <button (click)="getpassed()" >Get time</button>
-  </p>
+      <button (click)="getpassed()" >Get time</button>
+    </p>
+  </div>
+  <div>
+    <la-hello [text] = 'title' (talk)="show($event)" ></la-hello>
+  </div>
 </div>
