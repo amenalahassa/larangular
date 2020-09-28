@@ -1,14 +1,81 @@
-<div class="welcome">
-  <div>
-    <p>Welcome on  {{ title }}</p>
-    <p>It is : {{ time }} </p>
-    <p>
-      <span> {{ passed }} time pass since the component is mounted</span>
-
-      <button (click)="getpassed()" >Get time</button>
-    </p>
+<div class="masonry-item row">
+  <div class="col-md-12">
+    <div class="bgc-white p-20">
+      <h4 class="c-grey-900 mB-20">Faire une facture </h4>
+    <div class="mT-30">
+      <form class="container">
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Libelle de l'article" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Quantite" required>
+          </div>
+          <div class="col-md-3 mb-3">
+            <input type="text" class="form-control" id="validationCustom04" placeholder="Prix unitaire" required>
+          </div>
+          <div class="col-md-3 mb-3 ">
+            <div class="peer">
+              <button type="button" class="btn cur-p btn-primary">Ajouter l'article à la facture </button>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3 to-align-right">
+            <div class="peer">
+              <button type="button" class="btn cur-p btn-success">Délivrer la facture </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-  <div>
-    <la-hello [text] = 'title' (talk)="show($event)" ></la-hello>
+  </div>
+  <div class="col-md-12">
+    <div class="bgc-white p-20 mB-20 table-responsive">
+      <h5 class="c-grey-900 mB-20">Listes des articles facturés</h5>
+      <table class="table table-bordered ">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">Description</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Prix unitaire</th>
+          <th scope="col">Total</th>
+          <th scope="col">#</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>Supprimer</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td>Supprimer</td>
+        </tr>
+        <tr>
+          <td colspan="4">Sous-Total</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <td colspan="4">Taux d'imposition</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <td colspan="4">TVA</td>
+          <td>@twitter</td>
+        </tr><tr>
+          <td colspan="4">A payer</td>
+          <td>@twitter</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

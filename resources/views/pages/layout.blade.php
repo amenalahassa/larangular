@@ -122,33 +122,17 @@
                 <li class="nav-item mT-30 actived">
                     <a class="sidebar-link" href="#">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-user"></i>
+                  <i class="c-blue-500 ti-money"></i>
                 </span>
-                        <span class="title">Students</span>
+                        <span class="title">Faire une facture</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class='sidebar-link' href="#">
                 <span class="icon-holder">
-                  <i class="c-brown-500 ti-slice"></i>
+                  <i class="c-brown-500 ti-list"></i>
                 </span>
-                        <span class="title">Grades</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class='sidebar-link' href="#">
-                <span class="icon-holder">
-                  <i class="c-blue-500 ti-bar-chart-alt"></i>
-                </span>
-                        <span class="title">Averages</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class='sidebar-link' href="#">
-                <span class="icon-holder">
-                  <i class="c-deep-orange-500 ti-cup"></i>
-                </span>
-                        <span class="title">Ranks</span>
+                        <span class="title">Liste des factures</span>
                     </a>
                 </li>
             </ul>
@@ -205,19 +189,7 @@
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
             <div id='mainContent'>
-                <div class="row gap-20 masonry pos-r">
-                    <div class="masonry-sizer col-md-6"></div>
-                    <div class="masonry-item col-12">
-                        <!-- #Site Visits ==================== -->
-                        <div class="bd bgc-white">
-                            <div class="peers fxw-nw@lg+ ai-s">
-
-                                @yield('main')
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @yield('main')
             </div>
         </main>
 
