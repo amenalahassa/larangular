@@ -40,422 +40,6 @@ const environment = {
 
 /***/ }),
 
-/***/ "FDtu":
-/*!*********************************************!*\
-  !*** ./src/app/Service/get-date.service.ts ***!
-  \*********************************************/
-/*! exports provided: GetDateService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GetDateService", function() { return GetDateService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-class GetDateService {
-    constructor() {
-        this.today = new Date();
-    }
-    now() {
-        return this.today.getDate() + '-' + (String(this.today.getMonth() + 1).padStart(2, '0')) + '-' + this.today.getFullYear() + " " + (String(this.today.getHours()).padStart(2, '0')) + ":" + this.today.getMinutes() + ":" + this.today.getSeconds();
-    }
-}
-GetDateService.ɵfac = function GetDateService_Factory(t) { return new (t || GetDateService)(); };
-GetDateService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: GetDateService, factory: GetDateService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GetDateService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return []; }, null); })();
-
-
-/***/ }),
-
-/***/ "MROq":
-/*!**********************************************************************************************************************!*\
-  !*** /home/gwladalah/Documents/Developpement/Projets/Larangular/larangular/node_modules/moment/locale sync ^\.\/.*$ ***!
-  \**********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./af": "8GSH",
-	"./af.js": "8GSH",
-	"./ar": "NcOb",
-	"./ar-dz": "1ors",
-	"./ar-dz.js": "1ors",
-	"./ar-kw": "Sc1Y",
-	"./ar-kw.js": "Sc1Y",
-	"./ar-ly": "GzvP",
-	"./ar-ly.js": "GzvP",
-	"./ar-ma": "hH25",
-	"./ar-ma.js": "hH25",
-	"./ar-sa": "u2jB",
-	"./ar-sa.js": "u2jB",
-	"./ar-tn": "5Mza",
-	"./ar-tn.js": "5Mza",
-	"./ar.js": "NcOb",
-	"./az": "ZVVJ",
-	"./az.js": "ZVVJ",
-	"./be": "kQaN",
-	"./be.js": "kQaN",
-	"./bg": "+n5x",
-	"./bg.js": "+n5x",
-	"./bm": "TTiN",
-	"./bm.js": "TTiN",
-	"./bn": "aIF2",
-	"./bn.js": "aIF2",
-	"./bo": "QWb5",
-	"./bo.js": "QWb5",
-	"./br": "iQoZ",
-	"./br.js": "iQoZ",
-	"./bs": "EL7g",
-	"./bs.js": "EL7g",
-	"./ca": "vd/2",
-	"./ca.js": "vd/2",
-	"./cs": "K+3W",
-	"./cs.js": "K+3W",
-	"./cv": "Jt3X",
-	"./cv.js": "Jt3X",
-	"./cy": "sWi3",
-	"./cy.js": "sWi3",
-	"./da": "YcFX",
-	"./da.js": "YcFX",
-	"./de": "BKZ+",
-	"./de-at": "Oq9h",
-	"./de-at.js": "Oq9h",
-	"./de-ch": "hHY4",
-	"./de-ch.js": "hHY4",
-	"./de.js": "BKZ+",
-	"./dv": "w8Ej",
-	"./dv.js": "w8Ej",
-	"./el": "tSbB",
-	"./el.js": "tSbB",
-	"./en-au": "HgyJ",
-	"./en-au.js": "HgyJ",
-	"./en-ca": "ZyTy",
-	"./en-ca.js": "ZyTy",
-	"./en-gb": "exaB",
-	"./en-gb.js": "exaB",
-	"./en-ie": "yKzn",
-	"./en-ie.js": "yKzn",
-	"./en-il": "TB59",
-	"./en-il.js": "TB59",
-	"./en-in": "S70V",
-	"./en-in.js": "S70V",
-	"./en-nz": "iDxo",
-	"./en-nz.js": "iDxo",
-	"./en-sg": "zS0P",
-	"./en-sg.js": "zS0P",
-	"./eo": "4bvN",
-	"./eo.js": "4bvN",
-	"./es": "GNPT",
-	"./es-do": "R7mU",
-	"./es-do.js": "R7mU",
-	"./es-us": "Nstw",
-	"./es-us.js": "Nstw",
-	"./es.js": "GNPT",
-	"./et": "ZOjb",
-	"./et.js": "ZOjb",
-	"./eu": "kFC9",
-	"./eu.js": "kFC9",
-	"./fa": "8Cju",
-	"./fa.js": "8Cju",
-	"./fi": "vcN1",
-	"./fi.js": "vcN1",
-	"./fil": "3g1g",
-	"./fil.js": "3g1g",
-	"./fo": "8Ygf",
-	"./fo.js": "8Ygf",
-	"./fr": "Y8Ij",
-	"./fr-ca": "t+Zl",
-	"./fr-ca.js": "t+Zl",
-	"./fr-ch": "SPXN",
-	"./fr-ch.js": "SPXN",
-	"./fr.js": "Y8Ij",
-	"./fy": "T3MF",
-	"./fy.js": "T3MF",
-	"./ga": "NowM",
-	"./ga.js": "NowM",
-	"./gd": "GJYX",
-	"./gd.js": "GJYX",
-	"./gl": "MdC8",
-	"./gl.js": "MdC8",
-	"./gom-deva": "QJjq",
-	"./gom-deva.js": "QJjq",
-	"./gom-latn": "5j0y",
-	"./gom-latn.js": "5j0y",
-	"./gu": "fY0S",
-	"./gu.js": "fY0S",
-	"./he": "ACAV",
-	"./he.js": "ACAV",
-	"./hi": "3WqV",
-	"./hi.js": "3WqV",
-	"./hr": "OnNk",
-	"./hr.js": "OnNk",
-	"./hu": "EQmw",
-	"./hu.js": "EQmw",
-	"./hy-am": "MNf7",
-	"./hy-am.js": "MNf7",
-	"./id": "0yow",
-	"./id.js": "0yow",
-	"./is": "TmOJ",
-	"./is.js": "TmOJ",
-	"./it": "xD/0",
-	"./it-ch": "foQf",
-	"./it-ch.js": "foQf",
-	"./it.js": "xD/0",
-	"./ja": "jOnb",
-	"./ja.js": "jOnb",
-	"./jv": "lOtj",
-	"./jv.js": "lOtj",
-	"./ka": "BAN/",
-	"./ka.js": "BAN/",
-	"./kk": "iNiw",
-	"./kk.js": "iNiw",
-	"./km": "TUxt",
-	"./km.js": "TUxt",
-	"./kn": "hQzt",
-	"./kn.js": "hQzt",
-	"./ko": "ZNZT",
-	"./ko.js": "ZNZT",
-	"./ku": "S0Tg",
-	"./ku.js": "S0Tg",
-	"./ky": "JO+T",
-	"./ky.js": "JO+T",
-	"./lb": "vn/h",
-	"./lb.js": "vn/h",
-	"./lo": "gnIm",
-	"./lo.js": "gnIm",
-	"./lt": "6PD3",
-	"./lt.js": "6PD3",
-	"./lv": "YKe2",
-	"./lv.js": "YKe2",
-	"./me": "d3TR",
-	"./me.js": "d3TR",
-	"./mi": "hTlv",
-	"./mi.js": "hTlv",
-	"./mk": "ffVN",
-	"./mk.js": "ffVN",
-	"./ml": "ejL1",
-	"./ml.js": "ejL1",
-	"./mn": "RIsM",
-	"./mn.js": "RIsM",
-	"./mr": "CPJk",
-	"./mr.js": "CPJk",
-	"./ms": "d5Hy",
-	"./ms-my": "t4T9",
-	"./ms-my.js": "t4T9",
-	"./ms.js": "d5Hy",
-	"./mt": "1KVU",
-	"./mt.js": "1KVU",
-	"./my": "LsNb",
-	"./my.js": "LsNb",
-	"./nb": "h+U8",
-	"./nb.js": "h+U8",
-	"./ne": "2JSI",
-	"./ne.js": "2JSI",
-	"./nl": "jsZ8",
-	"./nl-be": "+h6j",
-	"./nl-be.js": "+h6j",
-	"./nl.js": "jsZ8",
-	"./nn": "mh29",
-	"./nn.js": "mh29",
-	"./oc-lnc": "zX+o",
-	"./oc-lnc.js": "zX+o",
-	"./pa-in": "O6bP",
-	"./pa-in.js": "O6bP",
-	"./pl": "8Bez",
-	"./pl.js": "8Bez",
-	"./pt": "DDip",
-	"./pt-br": "uHm5",
-	"./pt-br.js": "uHm5",
-	"./pt.js": "DDip",
-	"./ro": "baBi",
-	"./ro.js": "baBi",
-	"./ru": "ecsu",
-	"./ru.js": "ecsu",
-	"./sd": "e9KM",
-	"./sd.js": "e9KM",
-	"./se": "CZRU",
-	"./se.js": "CZRU",
-	"./si": "TO58",
-	"./si.js": "TO58",
-	"./sk": "K+Lk",
-	"./sk.js": "K+Lk",
-	"./sl": "QK6v",
-	"./sl.js": "QK6v",
-	"./sq": "v3Qg",
-	"./sq.js": "v3Qg",
-	"./sr": "Ndyf",
-	"./sr-cyrl": "PGvg",
-	"./sr-cyrl.js": "PGvg",
-	"./sr.js": "Ndyf",
-	"./ss": "2B8G",
-	"./ss.js": "2B8G",
-	"./sv": "WF5B",
-	"./sv.js": "WF5B",
-	"./sw": "4VvY",
-	"./sw.js": "4VvY",
-	"./ta": "dw3T",
-	"./ta.js": "dw3T",
-	"./te": "4MAb",
-	"./te.js": "4MAb",
-	"./tet": "/hi0",
-	"./tet.js": "/hi0",
-	"./tg": "PoVJ",
-	"./tg.js": "PoVJ",
-	"./th": "OY2w",
-	"./th.js": "OY2w",
-	"./tk": "zO4H",
-	"./tk.js": "zO4H",
-	"./tl-ph": "UC+K",
-	"./tl-ph.js": "UC+K",
-	"./tlh": "cWLW",
-	"./tlh.js": "cWLW",
-	"./tr": "EqYs",
-	"./tr.js": "EqYs",
-	"./tzl": "fN8o",
-	"./tzl.js": "fN8o",
-	"./tzm": "6cYq",
-	"./tzm-latn": "pdAN",
-	"./tzm-latn.js": "pdAN",
-	"./tzm.js": "6cYq",
-	"./ug-cn": "J+SV",
-	"./ug-cn.js": "J+SV",
-	"./uk": "6Olw",
-	"./uk.js": "6Olw",
-	"./ur": "QNGR",
-	"./ur.js": "QNGR",
-	"./uz": "hLzJ",
-	"./uz-latn": "KqOT",
-	"./uz-latn.js": "KqOT",
-	"./uz.js": "hLzJ",
-	"./vi": "EnIJ",
-	"./vi.js": "EnIJ",
-	"./x-pseudo": "W7dU",
-	"./x-pseudo.js": "W7dU",
-	"./yo": "QDhB",
-	"./yo.js": "QDhB",
-	"./zh-cn": "bjMe",
-	"./zh-cn.js": "bjMe",
-	"./zh-hk": "JFCg",
-	"./zh-hk.js": "JFCg",
-	"./zh-mo": "5BRa",
-	"./zh-mo.js": "5BRa",
-	"./zh-tw": "xBDH",
-	"./zh-tw.js": "xBDH"
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = "MROq";
-
-/***/ }),
-
-/***/ "Psk1":
-/*!****************************************!*\
-  !*** ./src/app/Pipes/from-now.pipe.ts ***!
-  \****************************************/
-/*! exports provided: FromNowPipe */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FromNowPipe", function() { return FromNowPipe; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "wgY5");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-class FromNowPipe {
-    transform(value, ...args) {
-        let time = moment__WEBPACK_IMPORTED_MODULE_1__(value, 'DD.MM.YYYY HH:mm:ss');
-        let duration = moment__WEBPACK_IMPORTED_MODULE_1__["duration"](moment__WEBPACK_IMPORTED_MODULE_1__().diff(time));
-        return duration.asSeconds();
-    }
-}
-FromNowPipe.ɵfac = function FromNowPipe_Factory(t) { return new (t || FromNowPipe)(); };
-FromNowPipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({ name: "fromNow", type: FromNowPipe, pure: true });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FromNowPipe, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"],
-        args: [{
-                name: 'fromNow'
-            }]
-    }], null, null); })();
-
-
-/***/ }),
-
-/***/ "S/U4":
-/*!****************************************************!*\
-  !*** ./src/app/Component/hello/hello.component.ts ***!
-  \****************************************************/
-/*! exports provided: HelloComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelloComponent", function() { return HelloComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-class HelloComponent {
-    constructor() {
-        this.talk = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-    }
-    ngOnInit() {
-        this.text = this.text.toUpperCase();
-    }
-    sayTouched() {
-        this.talk.emit("I'm touched");
-    }
-}
-HelloComponent.ɵfac = function HelloComponent_Factory(t) { return new (t || HelloComponent)(); };
-HelloComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HelloComponent, selectors: [["la-hello"]], inputs: { text: "text" }, outputs: { talk: "talk" }, decls: 2, vars: 1, consts: [[3, "click"]], template: function HelloComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HelloComponent_Template_p_click_0_listener() { return ctx.sayTouched(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.text);
-    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudC9oZWxsby9oZWxsby5jb21wb25lbnQuc2FzcyJ9 */"] });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HelloComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-                selector: 'la-hello',
-                templateUrl: './hello.component.html',
-                styleUrls: ['./hello.component.sass']
-            }]
-    }], function () { return []; }, { text: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }], talk: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
-        }] }); })();
-
-
-/***/ }),
-
 /***/ "Sy1n":
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
@@ -467,168 +51,72 @@ HelloComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _Service_get_date_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Service/get-date.service */ "FDtu");
-/* harmony import */ var _Pipes_from_now_pipe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Pipes/from-now.pipe */ "Psk1");
+/* harmony import */ var _Mymodule_biblio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Mymodule/biblio */ "dWHA");
+/* harmony import */ var _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Component/facture-form/facture-form.component */ "scns");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Component/facture-client/facture-client.component */ "b4BC");
+/* harmony import */ var _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Component/facture-table/facture-table.component */ "zz/u");
 
 
 
 
 
 
+
+function AppComponent_la_facture_table_2_Template(rf, ctx) { if (rf & 1) {
+    const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "la-facture-table", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("deleteArticle", function AppComponent_la_facture_table_2_Template_la_facture_table_deleteArticle_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r1.deleteArticles($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("liste", ctx_r0.articleListe);
+} }
 class AppComponent {
-    constructor(date, mypipe) {
-        this.date = date;
-        this.mypipe = mypipe;
+    constructor() {
+        this.articleListe = [];
+    }
+    addAticles() {
+        let lib = document.querySelector('#libelle');
+        let qte = document.querySelector('#qte');
+        let prix = document.querySelector('#prix');
+        let article = {
+            id: Date.now(),
+            lib: lib.value,
+            qte: parseInt(qte.value),
+            prix: parseInt(prix.value)
+        };
+        this.articleListe.push(article);
+        lib.value = "";
+        qte.value = "";
+        prix.value = "";
+    }
+    deleteArticles(id) {
+        this.articleListe = _Mymodule_biblio__WEBPACK_IMPORTED_MODULE_1__["arrayRemoveId"](this.articleListe, id);
     }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_Service_get_date_service__WEBPACK_IMPORTED_MODULE_1__["GetDateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_Pipes_from_now_pipe__WEBPACK_IMPORTED_MODULE_2__["FromNowPipe"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["la-root"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_Service_get_date_service__WEBPACK_IMPORTED_MODULE_1__["GetDateService"], _Pipes_from_now_pipe__WEBPACK_IMPORTED_MODULE_2__["FromNowPipe"]])], decls: 83, vars: 0, consts: [[1, "masonry-item", "row"], [1, "col-md-12"], [1, "bgc-white", "p-20"], [1, "c-grey-900", "mB-20"], [1, "mT-30"], [1, "container"], [1, "row"], [1, "col-md-12", "mb-3"], ["type", "text", "id", "validationCustom01", "placeholder", "Libelle de l'article", "required", "", 1, "form-control"], [1, "col-md-3", "mb-3"], ["type", "text", "id", "validationCustom03", "placeholder", "Quantite", "required", "", 1, "form-control"], ["type", "text", "id", "validationCustom04", "placeholder", "Prix unitaire", "required", "", 1, "form-control"], [1, "peer"], ["type", "button", 1, "btn", "cur-p", "btn-primary"], [1, "col-md-3", "mb-3", "to-align-right"], ["type", "button", 1, "btn", "cur-p", "btn-success"], [1, "bgc-white", "p-20", "mB-20", "table-responsive"], [1, "table", "table-bordered"], [1, "thead-dark"], ["scope", "col"], ["scope", "row"], ["colspan", "4"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["la-root"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([])], decls: 4, vars: 1, consts: [[1, "masonry-item", "row"], [1, "to-set-width", 3, "addArticle"], ["class", "to-set-width", 3, "liste", "deleteArticle", 4, "ngIf"], [1, "to-set-width"], [1, "to-set-width", 3, "liste", "deleteArticle"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h4", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Faire une facture ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "la-facture-form", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("addArticle", function AppComponent_Template_la_facture_form_addArticle_1_listener() { return ctx.addAticles(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "form", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "input", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, AppComponent_la_facture_table_2_Template, 1, 1, "la-facture-table", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "la-facture-client", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "input", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "input", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "button", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Ajouter l'article \u00E0 la facture ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "button", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "D\u00E9livrer la facture ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "h5", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Listes des articles factur\u00E9s");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "table", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "thead", 18);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "th", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Description");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "th", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Quantit\u00E9");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "th", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "Prix unitaire");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "th", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "Total");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "th", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "#");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "tbody");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "th", 20);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "Mark");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "Otto");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, "@mdo");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, "Supprimer");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "th", 20);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, "2");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, "Jacob");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, "Thornton");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, "@fat");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, "Supprimer");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "td", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "Sous-Total");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](67, "@twitter");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "td", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70, "Taux d'imposition");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, "@twitter");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](74, "td", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](75, "TVA");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](77, "@twitter");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](79, "td", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](80, "A payer");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](81, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](82, "@twitter");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: [".to-align-right[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\n.table-responsive[_ngcontent-%COMP%] {\n  overflow-x: scroll;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n\n.table-responsive[_ngcontent-%COMP%]::-webkit-scrollbar {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0UsaUJBQWlCO0FBRG5COztBQUlBO0VBQ0Usa0JBQWtCO0VBQ2xCLHdCQUF3QjtFQUN4QixxQkFBcUI7QUFEdkI7O0FBSUE7RUFDRSxhQUFhO0FBRGYiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuLnRvLWFsaWduLXJpZ2h0IHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7IH1cblxuXG4udGFibGUtcmVzcG9uc2l2ZSB7XG4gIG92ZXJmbG93LXg6IHNjcm9sbDtcbiAgLW1zLW92ZXJmbG93LXN0eWxlOiBub25lICAvKiBJRSBhbmQgRWRnZSAqLztcbiAgc2Nyb2xsYmFyLXdpZHRoOiBub25lICAvKiBGaXJlZm94ICovOyB9XG5cblxuLnRhYmxlLXJlc3BvbnNpdmU6Oi13ZWJraXQtc2Nyb2xsYmFyIHtcbiAgZGlzcGxheTogbm9uZTsgfVxuIl19 */"] });
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.articleListe.length > 0);
+    } }, directives: [_Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_2__["FactureFormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_4__["FactureClientComponent"], _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_5__["FactureTableComponent"]], styles: [".to-set-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0UsV0FBVztBQUFiIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiXG4udG8tc2V0LXdpZHRoIHtcbiAgd2lkdGg6IDEwMCU7IH1cbiJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
                 selector: 'la-root',
                 templateUrl: './app.component.html',
                 styleUrls: ['./app.component.sass'],
-                providers: [_Service_get_date_service__WEBPACK_IMPORTED_MODULE_1__["GetDateService"], _Pipes_from_now_pipe__WEBPACK_IMPORTED_MODULE_2__["FromNowPipe"]]
+                providers: []
             }]
-    }], function () { return [{ type: _Service_get_date_service__WEBPACK_IMPORTED_MODULE_1__["GetDateService"] }, { type: _Pipes_from_now_pipe__WEBPACK_IMPORTED_MODULE_2__["FromNowPipe"] }]; }, null); })();
+    }], function () { return []; }, null); })();
 
 
 /***/ }),
@@ -646,8 +134,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "Sy1n");
-/* harmony import */ var _Pipes_from_now_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Pipes/from-now.pipe */ "Psk1");
-/* harmony import */ var _Component_hello_hello_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Component/hello/hello.component */ "S/U4");
+/* harmony import */ var _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Component/facture-form/facture-form.component */ "scns");
+/* harmony import */ var _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Component/facture-table/facture-table.component */ "zz/u");
+/* harmony import */ var _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Component/facture-client/facture-client.component */ "b4BC");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+
+
 
 
 
@@ -658,26 +150,314 @@ class AppModule {
 }
 AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
 AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-        _Pipes_from_now_pipe__WEBPACK_IMPORTED_MODULE_3__["FromNowPipe"],
-        _Component_hello_hello_component__WEBPACK_IMPORTED_MODULE_4__["HelloComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]] }); })();
+        _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_3__["FactureFormComponent"],
+        _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_4__["FactureTableComponent"],
+        _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_5__["FactureClientComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
                 declarations: [
                     _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-                    _Pipes_from_now_pipe__WEBPACK_IMPORTED_MODULE_3__["FromNowPipe"],
-                    _Component_hello_hello_component__WEBPACK_IMPORTED_MODULE_4__["HelloComponent"],
+                    _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_3__["FactureFormComponent"],
+                    _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_4__["FactureTableComponent"],
+                    _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_5__["FactureClientComponent"],
                 ],
                 imports: [
-                    _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
+                    _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+                    _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
                 ],
                 providers: [],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
             }]
     }], null, null); })();
+
+
+/***/ }),
+
+/***/ "b4BC":
+/*!**********************************************************************!*\
+  !*** ./src/app/Component/facture-client/facture-client.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: FactureClientComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FactureClientComponent", function() { return FactureClientComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class FactureClientComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+FactureClientComponent.ɵfac = function FactureClientComponent_Factory(t) { return new (t || FactureClientComponent)(); };
+FactureClientComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureClientComponent, selectors: [["la-facture-client"]], decls: 46, vars: 0, consts: [["id", "modalAboutClient", "data-backdrop", "static", "data-keyboard", "false", "tabindex", "-1", "role", "dialog", "aria-labelledby", "exampleModalLabel", "aria-hidden", "true", 1, "modal", "fade"], ["role", "document", 1, "modal-dialog", "modal-dialog-centered", "modal-dialog-scrollable"], [1, "modal-content"], [1, "modal-header"], ["id", "modaltitle", 1, "modal-title"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "close"], ["aria-hidden", "true"], [1, "modal-body"], [1, "bgc-white"], [1, "container"], [1, "row"], [1, "col-md-12", "mb-3"], ["for", "prenom"], ["type", "text", "id", "prenom", "required", "", 1, "form-control"], ["for", "nom"], ["type", "text", "id", "nom", 1, "form-control"], [1, "col-md-6", "mb-3"], ["for", "tel"], ["type", "tel", "id", "tel", "required", "", 1, "form-control"], ["for", "adr"], ["type", "text", "id", "adr", 1, "form-control"], ["for", "monnaie"], ["type", "number", "id", "monnaie", "required", "", 1, "form-control"], ["for", "reliquat"], ["type", "number", "id", "reliquat", "readonly", "", 1, "form-control"], [1, "modal-footer"], ["type", "button", "data-dismiss", "modal", 1, "btn", "btn-secondary"], ["type", "button", 1, "btn", "btn-primary"]], template: function FactureClientComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "h5", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "A propos du client");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "button", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "span", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "\u00D7");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "form", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "label", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Pr\u00E9nom");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "input", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "label", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Nom");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "input", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "label", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Tel");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "input", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "label", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Adresse");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "input", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "label", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "Montant recu");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "input", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "label", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "Reliquat");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "input", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "button", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Fermer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "button", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "D\u00E9livrer la facture ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudC9mYWN0dXJlLWNsaWVudC9mYWN0dXJlLWNsaWVudC5jb21wb25lbnQuc2FzcyJ9 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FactureClientComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'la-facture-client',
+                templateUrl: './facture-client.component.html',
+                styleUrls: ['./facture-client.component.sass']
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
+/***/ "dWHA":
+/*!************************************!*\
+  !*** ./src/app/Mymodule/biblio.ts ***!
+  \************************************/
+/*! exports provided: s, arrayRemove, arrayRemoveId */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return s; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arrayRemove", function() { return arrayRemove; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arrayRemoveId", function() { return arrayRemoveId; });
+const s = (v) => { console.log(v); };
+function arrayRemove(arr, value) {
+    return arr.filter(function (ele) { return ele !== value; });
+}
+function arrayRemoveId(arr, value) {
+    return arr.filter(function (ele) { return ele.id !== value; });
+}
+
+
+/***/ }),
+
+/***/ "f0oT":
+/*!********************************************!*\
+  !*** ./src/app/Service/requete.service.ts ***!
+  \********************************************/
+/*! exports provided: RequeteService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RequeteService", function() { return RequeteService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+
+
+
+class RequeteService {
+    constructor(http) {
+        this.http = http;
+        this.url = {
+            find: 'article/find'
+        };
+        this.data = {
+            _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+            data: null,
+        };
+    }
+    findArticle(item) {
+        this.data.data = {
+            item: item
+        };
+        return this.http.post(this.url.find, this.data, this.httpOptions);
+    }
+}
+RequeteService.ɵfac = function RequeteService_Factory(t) { return new (t || RequeteService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+RequeteService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: RequeteService, factory: RequeteService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](RequeteService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "scns":
+/*!******************************************************************!*\
+  !*** ./src/app/Component/facture-form/facture-form.component.ts ***!
+  \******************************************************************/
+/*! exports provided: FactureFormComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FactureFormComponent", function() { return FactureFormComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _Service_requete_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Service/requete.service */ "f0oT");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
+
+
+
+function FactureFormComponent_option_10_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "option", 15);
+} if (rf & 2) {
+    const art_r1 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("value", art_r1.libelle);
+} }
+class FactureFormComponent {
+    constructor(request) {
+        this.request = request;
+        this.articles = [];
+        this.addArticle = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    ngOnInit() {
+    }
+    search(val) {
+        let input = val.target.value;
+        if (input != "") {
+            this.request.findArticle(input)
+                .subscribe(result => {
+                this.articles = result.data;
+            });
+        }
+    }
+    triggerAdd($event) {
+        let form = document.querySelector('.factureForm');
+        if (form.checkValidity()) {
+            $event.preventDefault();
+            $event.stopPropagation();
+            this.addArticle.emit();
+        }
+    }
+}
+FactureFormComponent.ɵfac = function FactureFormComponent_Factory(t) { return new (t || FactureFormComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_Service_requete_service__WEBPACK_IMPORTED_MODULE_1__["RequeteService"])); };
+FactureFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureFormComponent, selectors: [["la-facture-form"]], outputs: { addArticle: "addArticle" }, decls: 20, vars: 1, consts: [[1, "col-md-12"], [1, "bgc-white", "p-20"], [1, "c-grey-900", "mB-20"], [1, "mT-30"], [1, "container", "factureForm"], [1, "row"], [1, "col-md-4", "mb-3"], ["list", "articles", "type", "text", "id", "libelle", "placeholder", "Libell\u00E9 de l'article", "required", "", 1, "form-control", 3, "keyup"], ["id", "articles"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "number", "id", "prix", "min", "1", "placeholder", "Prix unitaire", "required", "", 1, "form-control"], ["type", "number", "min", "1", "id", "qte", "placeholder", "Quantit\u00E9", "required", "", 1, "form-control"], [1, "col-md-12", "mb-3", "to-align-right"], [1, "peer"], ["type", "submit", 1, "btn", "cur-p", "btn-primary", 3, "click"], [3, "value"]], template: function FactureFormComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h4", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Faire une facture ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "form", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "input", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function FactureFormComponent_Template_input_keyup_8_listener($event) { return ctx.search($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "datalist", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, FactureFormComponent_option_10_Template, 1, 1, "option", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "input", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "input", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "button", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function FactureFormComponent_Template_button_click_18_listener($event) { return ctx.triggerAdd($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Ajouter l'article \u00E0 la facture ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.articles);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: [".to-align-right[_ngcontent-%COMP%] {\n  text-align: right;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtZm9ybS9mYWN0dXJlLWZvcm0uY29tcG9uZW50LnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC9Db21wb25lbnQvZmFjdHVyZS1mb3JtL2ZhY3R1cmUtZm9ybS5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi50by1hbGlnbi1yaWdodCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0OyB9XG4iXX0= */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FactureFormComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'la-facture-form',
+                templateUrl: './facture-form.component.html',
+                styleUrls: ['./facture-form.component.sass'],
+            }]
+    }], function () { return [{ type: _Service_requete_service__WEBPACK_IMPORTED_MODULE_1__["RequeteService"] }]; }, { addArticle: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }] }); })();
 
 
 /***/ }),
@@ -728,6 +508,175 @@ webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
 webpackEmptyAsyncContext.id = "zn8P";
+
+/***/ }),
+
+/***/ "zz/u":
+/*!********************************************************************!*\
+  !*** ./src/app/Component/facture-table/facture-table.component.ts ***!
+  \********************************************************************/
+/*! exports provided: FactureTableComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FactureTableComponent", function() { return FactureTableComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
+
+
+function FactureTableComponent_tr_23_Template(rf, ctx) { if (rf & 1) {
+    const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "th", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "button", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function FactureTableComponent_tr_23_Template_button_click_10_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3); const item_r1 = ctx.$implicit; const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r2.triggerDelete(item_r1.id); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Retirer");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const item_r1 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r1.lib);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r1.qte);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", item_r1.prix, " fr ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", item_r1.qte * item_r1.prix, " fr");
+} }
+class FactureTableComponent {
+    constructor() {
+        this.deleteArticle = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    ngOnInit() {
+    }
+    sousTotal() {
+        let total = 0;
+        let i = 0;
+        for (i = 0; i < this.liste.length; i++) {
+            total += (this.liste[i].qte * this.liste[i].prix);
+        }
+        return total;
+    }
+    tva() {
+        return (this.sousTotal() * 18) / 100;
+    }
+    triggerDelete(id) {
+        this.deleteArticle.emit(id);
+    }
+}
+FactureTableComponent.ɵfac = function FactureTableComponent_Factory(t) { return new (t || FactureTableComponent)(); };
+FactureTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureTableComponent, selectors: [["la-facture-table"]], inputs: { liste: "liste" }, outputs: { deleteArticle: "deleteArticle" }, decls: 44, vars: 4, consts: [[1, "col-md-12"], [1, "bgc-white", "p-20", "mB-20", "table-responsive"], [1, "row"], [1, "col-md-9", "c-grey-900", "mB-20"], [1, "col-md-3", "mb-3", "to-align-right"], [1, "peer"], ["type", "button", "data-toggle", "modal", "data-target", "#modalAboutClient", 1, "btn", "cur-p", "btn-success"], [1, "table", "table-bordered"], [1, "thead-dark"], ["scope", "col"], [4, "ngFor", "ngForOf"], ["colspan", "4"], ["scope", "row"], ["type", "button", 1, "btn", "cur-p", "btn-danger", 3, "click"]], template: function FactureTableComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h5", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Listes des articles factur\u00E9s");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "button", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Enr\u00E9gistrer la facture ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "table", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "thead", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "th", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Description");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "th", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Quantit\u00E9");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "th", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Prix unitaire");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "th", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Total");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "th", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "#");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "tbody");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, FactureTableComponent_tr_23_Template, 12, 4, "tr", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "td", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Sous-Total");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "td", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Taux d'imposition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "18%");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "td", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "TVA");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "td", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, "Net \u00E0 payer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.liste);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.sousTotal(), " fr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.tva(), " fr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.sousTotal() + ctx.tva(), " fr");
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: [".to-align-right[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\n.table-responsive[_ngcontent-%COMP%] {\n  overflow-x: scroll;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n\n.table-responsive[_ngcontent-%COMP%]::-webkit-scrollbar {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtdGFibGUvZmFjdHVyZS10YWJsZS5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQix3QkFBd0I7RUFDeEIscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsYUFBYTtBQUNmIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtdGFibGUvZmFjdHVyZS10YWJsZS5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi50by1hbGlnbi1yaWdodCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0OyB9XG5cblxuLnRhYmxlLXJlc3BvbnNpdmUge1xuICBvdmVyZmxvdy14OiBzY3JvbGw7XG4gIC1tcy1vdmVyZmxvdy1zdHlsZTogbm9uZSAgLyogSUUgYW5kIEVkZ2UgKi87XG4gIHNjcm9sbGJhci13aWR0aDogbm9uZSAgLyogRmlyZWZveCAqLzsgfVxuXG5cbi50YWJsZS1yZXNwb25zaXZlOjotd2Via2l0LXNjcm9sbGJhciB7XG4gIGRpc3BsYXk6IG5vbmU7IH1cbiJdfQ== */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FactureTableComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'la-facture-table',
+                templateUrl: './facture-table.component.html',
+                styleUrls: ['./facture-table.component.sass']
+            }]
+    }], function () { return []; }, { liste: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], deleteArticle: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }] }); })();
+
 
 /***/ })
 

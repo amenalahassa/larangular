@@ -1,0 +1,30 @@
+<div class="col-md-12">
+  <div class="bgc-white p-20">
+    <h4 class="c-grey-900 mB-20">Faire une facture </h4>
+    <div class="mT-30">
+      <form class="container factureForm"  >
+        <div class="row">
+            <div class="col-md-4 mb-3">
+              <input list="articles" type="text" (keyup)="search($event)" id="libelle" class="form-control" placeholder="Libellé de l'article" required>
+              <datalist id="articles">
+                <option *ngFor="let art of articles" value="{{ art.libelle }}">
+              </datalist>
+            </div>
+            <div class="col-md-4 mb-3">
+              <input type="number" id="prix" min="1" class="form-control" placeholder="Prix unitaire" required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <input type="number" min="1" id="qte" class="form-control" placeholder="Quantité" required>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-3 to-align-right">
+            <div class="peer">
+              <button type="submit" class="btn cur-p btn-primary" (click)="triggerAdd($event)" >Ajouter l'article à la facture </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

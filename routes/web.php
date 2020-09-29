@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 
-Route::get('/home', [\App\Http\Controllers\StudentController::class, 'index'])->name('home');
+Route::get('/home', [\App\Http\Controllers\FactureController::class, 'index'])->name('home');
+
+
+Route::post('article/find',[\App\Http\Controllers\FactureController::class, 'findArticle']);
 
 
 Route::middleware('guest')->group(function () {

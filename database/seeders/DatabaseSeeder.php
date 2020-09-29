@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Article;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -19,5 +20,7 @@ class DatabaseSeeder extends Seeder
              'email' => 'a.an@yoo.com',
              'password' => bcrypt('amen2000'),
          ]);
+
+         Article::factory()->count(40)->create();
     }
 }
