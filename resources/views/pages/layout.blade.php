@@ -120,7 +120,7 @@
             <!-- ### $Sidebar Menu ### -->
             <ul class="sidebar-menu scrollable pos-r">
                 <li class="nav-item mT-30 actived">
-                    <a class="sidebar-link" href="#">
+                    <a class="sidebar-link" href="{{ route('home') }}">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-money"></i>
                 </span>

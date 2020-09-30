@@ -40,6 +40,51 @@ const environment = {
 
 /***/ }),
 
+/***/ "Cf+A":
+/*!**********************************************************!*\
+  !*** ./src/app/Module/test-module/test-module.module.ts ***!
+  \**********************************************************/
+/*! exports provided: TestModuleModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestModuleModule", function() { return TestModuleModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _Component_text_text_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Component/text/text.component */ "qlXp");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+
+
+
+
+
+class TestModuleModule {
+}
+TestModuleModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: TestModuleModule, bootstrap: [_Component_text_text_component__WEBPACK_IMPORTED_MODULE_2__["TextComponent"]] });
+TestModuleModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function TestModuleModule_Factory(t) { return new (t || TestModuleModule)(); }, imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](TestModuleModule, { declarations: [_Component_text_text_component__WEBPACK_IMPORTED_MODULE_2__["TextComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TestModuleModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                declarations: [
+                    _Component_text_text_component__WEBPACK_IMPORTED_MODULE_2__["TextComponent"]
+                ],
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                    _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+                ],
+                bootstrap: [_Component_text_text_component__WEBPACK_IMPORTED_MODULE_2__["TextComponent"]]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
 /***/ "Sy1n":
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
@@ -470,6 +515,42 @@ RequeteService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineIn
 
 /***/ }),
 
+/***/ "qlXp":
+/*!**************************************************!*\
+  !*** ./src/app/Component/text/text.component.ts ***!
+  \**************************************************/
+/*! exports provided: TextComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TextComponent", function() { return TextComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class TextComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+TextComponent.ɵfac = function TextComponent_Factory(t) { return new (t || TextComponent)(); };
+TextComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TextComponent, selectors: [["la-text"]], decls: 2, vars: 0, template: function TextComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Ca marche");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, styles: ["p[_ngcontent-%COMP%] {\n  color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50L3RleHQvdGV4dC5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7QUFDZCIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudC90ZXh0L3RleHQuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyJwIHtcbiAgY29sb3I6IGJsYWNrOyB9XG4iXX0= */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TextComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'la-text',
+                templateUrl: './text.component.html',
+                styleUrls: ['./text.component.sass']
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
 /***/ "scns":
 /*!******************************************************************!*\
   !*** ./src/app/Component/facture-form/facture-form.component.ts ***!
@@ -489,9 +570,9 @@ __webpack_require__.r(__webpack_exports__);
 
 function FactureFormComponent_div_5_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Facture enregistr\u00E9e avec suc\u00E8ss. Telecharger le document ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Facture enregistr\u00E9e avec suc\u00E8ss. Telecharger la facture ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "ici");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "ici.");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -537,7 +618,7 @@ class FactureFormComponent {
     }
 }
 FactureFormComponent.ɵfac = function FactureFormComponent_Factory(t) { return new (t || FactureFormComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_Service_requete_service__WEBPACK_IMPORTED_MODULE_1__["RequeteService"])); };
-FactureFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureFormComponent, selectors: [["la-facture-form"]], inputs: { link: "link" }, outputs: { addArticle: "addArticle" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"]], decls: 21, vars: 2, consts: [[1, "col-md-12"], [1, "bgc-white", "p-20"], [1, "c-grey-900", "mB-20"], [1, "mT-30"], ["class", "alert alert-success rslt", "role", "alert", 4, "ngIf"], [1, "container", "factureForm"], [1, "row"], [1, "col-md-4", "mb-3"], ["list", "articles", "type", "text", "id", "libelle", "placeholder", "Libell\u00E9 de l'article", "required", "", 1, "form-control", 3, "keyup"], ["id", "articles"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "number", "id", "prix", "min", "1", "placeholder", "Prix unitaire", "required", "", 1, "form-control"], ["type", "number", "min", "1", "id", "qte", "placeholder", "Quantit\u00E9", "required", "", 1, "form-control"], [1, "col-md-12", "mb-3", "to-align-right"], [1, "peer"], ["type", "submit", 1, "btn", "cur-p", "btn-primary", 3, "click"], ["role", "alert", 1, "alert", "alert-success", "rslt"], [3, "href"], [3, "value"]], template: function FactureFormComponent_Template(rf, ctx) { if (rf & 1) {
+FactureFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureFormComponent, selectors: [["la-facture-form"]], inputs: { link: "link" }, outputs: { addArticle: "addArticle" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"]], decls: 21, vars: 2, consts: [[1, "col-md-12"], [1, "bgc-white", "p-20"], [1, "c-grey-900", "mB-20"], [1, "mT-30"], ["class", "alert alert-success rslt", "role", "alert", 4, "ngIf"], [1, "container", "factureForm"], [1, "row"], [1, "col-md-4", "mb-3"], ["list", "articles", "type", "text", "id", "libelle", "placeholder", "Libell\u00E9 de l'article", "required", "", 1, "form-control", 3, "keyup"], ["id", "articles"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "number", "id", "prix", "min", "1", "placeholder", "Prix unitaire", "required", "", 1, "form-control"], ["type", "number", "min", "1", "id", "qte", "placeholder", "Quantit\u00E9", "required", "", 1, "form-control"], [1, "col-md-12", "mb-3", "to-align-right"], [1, "peer"], ["type", "submit", 1, "btn", "cur-p", "btn-primary", 3, "click"], ["role", "alert", 1, "alert", "alert-success", "rslt"], ["target", "_blank", 3, "href"], [3, "value"]], template: function FactureFormComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h4", 2);
@@ -608,17 +689,21 @@ FactureFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./environments/environment */ "AytR");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "a3Wg");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "ZAI4");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+/* harmony import */ var _app_Module_test_module_test_module_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/Module/test-module/test-module.module */ "Cf+A");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./environments/environment */ "AytR");
 
 
 
 
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].production) {
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
 }
-_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+    .catch(err => console.error(err));
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_Module_test_module_test_module_module__WEBPACK_IMPORTED_MODULE_3__["TestModuleModule"])
     .catch(err => console.error(err));
 
 
