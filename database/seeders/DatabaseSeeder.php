@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Article;
+use App\Models\Client;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -21,6 +22,9 @@ class DatabaseSeeder extends Seeder
              'password' => bcrypt('amen2000'),
          ]);
 
-         Article::factory()->count(40)->create();
+         Article::factory()->count(10)->create();
+         Client::factory()->count(20)->create();
+
+
     }
 }

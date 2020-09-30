@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import * as b from './Mymodule/biblio'
 import {Article} from "./Interface/article";
+import {Client} from "./Interface/client";
+import {RequeteService} from "./Service/requete.service";
 
 @Component({
   selector: 'la-root',
@@ -11,8 +13,9 @@ import {Article} from "./Interface/article";
 export class AppComponent {
 
   articleListe: Array<Article> = []
+  link: string = null
 
-  constructor () {
+  constructor (private request:RequeteService) {
 
   }
 
@@ -39,5 +42,18 @@ export class AppComponent {
   deleteArticles (id)
   {
     this.articleListe = b.arrayRemoveId(this.articleListe, id)
+  }
+
+  sendCmd($event: Client) {
+    let cmd = {
+      client : $event,
+      products : this.articleListe
+    }
+
+    this.request.sendCmd(cmd)
+      .subscribe(result => {
+        this.articleListe = []
+        this.link = "download/" + result.data
+      })
   }
 }

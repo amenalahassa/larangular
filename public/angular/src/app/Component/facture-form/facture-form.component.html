@@ -2,7 +2,10 @@
   <div class="bgc-white p-20">
     <h4 class="c-grey-900 mB-20">Faire une facture </h4>
     <div class="mT-30">
-      <form class="container factureForm"  >
+      <div class="alert alert-success rslt" role="alert" *ngIf="fac != null">
+        Facture enregistrée avec sucèss. Telecharger la facture <a href="{{fac}}" target="_blank">ici.</a>
+      </div>
+      <form class="container factureForm">
         <div class="row">
             <div class="col-md-4 mb-3">
               <input list="articles" type="text" (keyup)="search($event)" id="libelle" class="form-control" placeholder="Libellé de l'article" required>

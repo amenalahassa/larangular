@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, Input, SimpleChange} from '@angular/core';
 import {RequeteService} from "../../Service/requete.service";
 import * as b from '../../Mymodule/biblio'
 
@@ -10,18 +10,26 @@ import * as b from '../../Mymodule/biblio'
 export class FactureFormComponent implements OnInit {
 
   articles: Array<any> = []
+  fac:string
 
-
+  @Input() link : string
   @Output() addArticle = new EventEmitter<void>()
 
 
   constructor(private request:RequeteService) { }
 
   ngOnInit(): void {
-
+    this.fac = this.link
   }
 
+
+  ngOnChanges(change: SimpleChange): void {
+    this.fac = this.link
+  }
+
+
   search(val:KeyboardEvent) {
+    this.fac = null
     let input = <string>(<HTMLInputElement>val.target).value
     if (input != "")
     {
