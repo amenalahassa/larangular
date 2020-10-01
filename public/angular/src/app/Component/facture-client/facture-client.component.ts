@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
-import * as b from '../../Mymodule/biblio'
+import * as b from '../../Module/biblio'
 import {RequeteService} from "../../Service/requete.service";
 import {Client} from "../../Interface/client";
 

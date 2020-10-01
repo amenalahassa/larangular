@@ -16,3 +16,10 @@ export function gIE(selector:string) {
   return <HTMLInputElement>document.querySelector(selector)
 
 }
+
+export function formatGetDate(date:string) {
+  let day = date.split('T')[0]
+  day = day.split('-')[2] + "-" + day.split('-')[1] + "-" + day.split('-')[0]
+  let hour = date.split('T')[1].split('.')[0]
+  return day + " à " + hour
+}

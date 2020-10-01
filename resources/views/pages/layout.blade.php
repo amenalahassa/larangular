@@ -128,7 +128,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class='sidebar-link' href="#">
+                    <a class='sidebar-link' href="{{ route('list') }}">
                 <span class="icon-holder">
                   <i class="c-brown-500 ti-list"></i>
                 </span>

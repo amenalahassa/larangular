@@ -6,6 +6,7 @@ import { FactureFormComponent } from './Component/facture-form/facture-form.comp
 import { FactureTableComponent } from './Component/facture-table/facture-table.component';
 import { FactureClientComponent } from './Component/facture-client/facture-client.component';
 import {HttpClientModule} from "@angular/common/http";
+import { FactureListeComponent } from './Component/facture-liste/facture-liste.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import {HttpClientModule} from "@angular/common/http";
     FactureFormComponent,
     FactureTableComponent,
     FactureClientComponent,
+    FactureListeComponent,
   ],
   imports: [
     BrowserModule,

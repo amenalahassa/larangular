@@ -11,11 +11,24 @@ class Commande extends Model
 
     protected $fillable = [
         'client_id',
+        'user_id',
         'tel',
         'adr',
-        'ss-total',
+        'ssTotal',
         'tva',
-        'monnaie'
+        'monnaie',
+        'ref'
     ];
+
+    public function client()
+    {
+        return $this->belongsTo('App\Models\Client');
+    }
+
+    public function productCount ()
+    {
+        $count = Product::where('commande_id', $this->id)->get()->count();
+        return $count;
+    }
 
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as b from './Mymodule/biblio'
+import * as b from './Module/biblio'
 import {Article} from "./Interface/article";
 import {Client} from "./Interface/client";
 import {RequeteService} from "./Service/requete.service";

@@ -1,6 +1,6 @@
 import {Component, OnInit, Output, EventEmitter, Input, SimpleChange} from '@angular/core';
 import {RequeteService} from "../../Service/requete.service";
-import * as b from '../../Mymodule/biblio'
+import * as b from '../../Module/biblio'
 
 @Component({
   selector: 'la-facture-form',

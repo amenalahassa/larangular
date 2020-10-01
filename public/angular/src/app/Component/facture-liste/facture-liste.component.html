@@ -1,0 +1,111 @@
+<div>
+  <div class="bgc-white p-20">
+    <h4 class="c-grey-900 mB-20">Rechercher une facture </h4>
+    <div class="mT-30">
+      <form class="container ">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input type="search" id="ref" (keyup)="verify()"  class="form-control" placeholder="FAC/2020-10-01/8699" required>
+          </div>
+          <div class="col-md-6 mb-3 to-align-right">
+            <div class="peer">
+              <button type="submit" id="btn-search" class="btn cur-p btn-primary" (click)="search($event)" disabled >Rechercher</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div   class="bgc-white p-20 mB-20 table-responsive" *ngIf="searched !== null">
+    <div class="row">
+      <h5 class="col-md-9 c-grey-900 mB-20">Résultat de la recherche</h5>
+      <div class="col-md-3 mb-3 to-align-right">
+        <div class="peer">
+          <button type="button" class="btn cur-p btn-success" (click)="back()" >Revenir à la liste des factures</button>
+        </div>
+      </div>
+    </div>
+    <div  *ngIf="searched.length > 0" >
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Réference</th>
+          <th scope="col">Date</th>
+          <th scope="col">Client</th>
+          <th scope="col">Tel</th>
+          <th scope="col">Adresse</th>
+          <th scope="col">Nombre d'articles achetés</th>
+          <th scope="col">Sous-Total</th>
+          <th scope="col">Total TVA</th>
+          <th scope="col">Monnaie</th>
+          <th scope="col">Reliquat</th>
+          <th scope="col">#</th>
+          <th scope="col">#</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let facture of searched">
+          <th scope="row">{{ facture.ref }}</th>
+          <th scope="row">{{ facture.date }}</th>
+          <th scope="row">{{ facture.client }}</th>
+          <th scope="row">{{ facture.tel }}</th>
+          <th scope="row">{{ facture.adr }}</th>
+          <th scope="row">{{ facture.productCount }}</th>
+          <th scope="row">{{ facture.ssTotal }}</th>
+          <th scope="row">{{ facture.tva }}</th>
+          <th scope="row">{{ facture.monnaie }}</th>
+          <th scope="row">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}}</th>
+          <th><button type="button" class="btn cur-p btn-danger" (click)="delete(facture.id)" >Supprimer</button></th>
+          <th><a href="download/{{facture.id}}" target="_blank"><button type="button" class="btn cur-p btn-primary" >Telécharger</button></a></th>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="searched.length == 0">
+      <p>Aucune facture ne possede la référence entrée.</p>
+    </div>
+  </div>
+  <div   class="bgc-white p-20 mB-20 table-responsive" *ngIf="searched === null">
+    <h4 class="c-grey-900 mB-20">Listes des factures </h4>
+    <div  *ngIf="factures.length > 0 && factures !== null" >
+      <p>Ce tableau contient les {{ factures.length }} dernières factures délivrées. Utiliser le moteur de recherche pour trouver une facture plus ancienne ou pour en verifier une. </p>
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Réference</th>
+          <th scope="col">Date</th>
+          <th scope="col">Client</th>
+          <th scope="col">Tel</th>
+          <th scope="col">Adresse</th>
+          <th scope="col">Nombre d'articles achetes</th>
+          <th scope="col">Sous-Total</th>
+          <th scope="col">Total TVA</th>
+          <th scope="col">Monnaie</th>
+          <th scope="col">Reliquat</th>
+          <th scope="col">#</th>
+          <th scope="col">#</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let facture of factures">
+          <th scope="row">{{ facture.ref }}</th>
+          <th scope="row">{{ facture.date }}</th>
+          <th scope="row">{{ facture.client }}</th>
+          <th scope="row">{{ facture.tel }}</th>
+          <th scope="row">{{ facture.adr }}</th>
+          <th scope="row">{{ facture.productCount }}</th>
+          <th scope="row">{{ facture.ssTotal }}</th>
+          <th scope="row">{{ facture.tva }}</th>
+          <th scope="row">{{ facture.monnaie }}</th>
+          <th scope="row">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}}</th>
+          <th><button type="button" class="btn cur-p btn-danger" (click)="delete(facture.id)" >Supprimer</button></th>
+          <th><a href="download/{{facture.id}}" target="_blank"><button type="button" class="btn cur-p btn-primary" >Telécharger</button></a></th>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="factures.length == 0">
+      <p>Vous n'avez encore aucune facture enregistrées.</p>
+    </div>
+  </div>
+</div>

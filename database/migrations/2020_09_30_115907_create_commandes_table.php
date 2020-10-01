@@ -16,9 +16,11 @@ class CreateCommandesTable extends Migration
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('tel');
+            $table->string('ref');
             $table->string('adr');
-            $table->float('ss-total');
+            $table->float('ssTotal');
             $table->float('tva');
             $table->float('monnaie');
             $table->timestamps();

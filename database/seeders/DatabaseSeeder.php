@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Article;
 use App\Models\Client;
+use App\Models\Commande;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -23,7 +25,10 @@ class DatabaseSeeder extends Seeder
          ]);
 
          Article::factory()->count(10)->create();
-         Client::factory()->count(20)->create();
+         Client::factory()->count(10)->create();
+//         Commande::factory()->count(150)->create();
+//         Product::factory()->count(200)->create();
+
 
 
     }

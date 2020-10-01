@@ -19,11 +19,16 @@ Auth::routes();
 
 
 Route::get('/home', [\App\Http\Controllers\FactureController::class, 'index'])->name('home');
+Route::get('/list', [\App\Http\Controllers\FactureController::class, 'show'])->name('list');
 
 
 Route::post('article/find',[\App\Http\Controllers\CommandeController::class, 'findArticle']);
-Route::post('client/find',[\App\Http\Controllers\CommandeController::class, 'findClient']);
 Route::post('commande/save',[\App\Http\Controllers\CommandeController::class, 'saveCmd']);
+Route::post('client/find',[\App\Http\Controllers\CommandeController::class, 'findClient']);
+
+Route::get('facture/list',[\App\Http\Controllers\FactureController::class, 'list']);
+Route::post('facture/delete',[\App\Http\Controllers\FactureController::class, 'delete']);
+Route::post('facture/find',[\App\Http\Controllers\FactureController::class, 'find']);
 
 
 Route::middleware('guest')->group(function () {

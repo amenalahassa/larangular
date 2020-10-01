@@ -7,6 +7,7 @@ use App\Models\Client;
 use App\Models\Commande;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CommandeController extends Controller
 {
@@ -47,15 +48,18 @@ class CommandeController extends Controller
 
         $total = $this->ssTotal($products);
 
+        $count = Commande::where('created_at', 'like', date("Y-m-d")."%")->get()->count();
+
         $cmd = Commande::create([
             'client_id' => $cmd_client,
+            'user_id' => Auth::id(),
             'tel' => $client['tel'],
             'adr' => $client['adresse'],
             'monnaie' => $client['monnaie'],
-            'ss-total' => $total,
-            'tva' => $this->tva($total)
+            'ssTotal' => $total,
+            'tva' => $this->tva($total),
+            'ref' => 'FAC/'. date("Y-m-d") . '/' . str_pad($count + 1, 4, '0', STR_PAD_LEFT),
         ]);
-
         $this->createProduct($products, $cmd->id);
 
         return response()->json(['data'=>$cmd->id], 200);

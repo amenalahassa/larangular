@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import * as b from '../../Mymodule/biblio'
+import * as b from '../../Module/biblio'
 
 
 @Component({
