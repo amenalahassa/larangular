@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\Commande;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Barryvdh\Snappy\Facades\SnappyPdf as PDF;
+
 
 class FactureController extends Controller
 {
@@ -54,6 +56,13 @@ class FactureController extends Controller
     }
 
 
+    public function download ($id)
+    {
+        $convocation = Commande::find($id);
+        view()->share('convocation', $convocation);
+        $pdfs = PDF::loadView('pages.pdf.convocation', $convocation)->setPaper('a4')->setOption('images', true)->setOption('no-outline', true);
+        return $pdfs->download('Convocation-' . $convocation->identifiant . '.pdf');
+    }
 
 
 
