@@ -19,6 +19,16 @@ export class AppComponent {
 
   }
 
+  ngOnInit () {
+    if (typeof(Storage) !== "undefined") {
+      let articles = JSON.parse(window.localStorage.getItem('articles'))
+      if (articles !== null)
+      {
+        this.articleListe = articles
+      }
+    }
+  }
+
   addAticles () {
     let lib = <HTMLInputElement>document.querySelector('#libelle')
     let qte = <HTMLInputElement>document.querySelector('#qte')
@@ -32,6 +42,7 @@ export class AppComponent {
     }
 
     this.articleListe.push(article)
+    window.localStorage.setItem('articles', JSON.stringify(this.articleListe))
 
     lib.value = ""
     qte.value = ""
@@ -42,6 +53,7 @@ export class AppComponent {
   deleteArticles (id)
   {
     this.articleListe = b.arrayRemoveId(this.articleListe, id)
+    window.localStorage.setItem('articles', JSON.stringify(this.articleListe))
   }
 
   sendCmd($event: Client) {
@@ -53,6 +65,7 @@ export class AppComponent {
     this.request.sendCmd(cmd)
       .subscribe(result => {
         this.articleListe = []
+        window.localStorage.setItem('articles', JSON.stringify(this.articleListe))
         this.link = "download/" + result.data
       })
   }

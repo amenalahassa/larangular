@@ -507,6 +507,14 @@ class AppComponent {
         this.articleListe = [];
         this.link = null;
     }
+    ngOnInit() {
+        if (typeof (Storage) !== "undefined") {
+            let articles = JSON.parse(window.localStorage.getItem('articles'));
+            if (articles !== null) {
+                this.articleListe = articles;
+            }
+        }
+    }
     addAticles() {
         let lib = document.querySelector('#libelle');
         let qte = document.querySelector('#qte');
@@ -518,12 +526,14 @@ class AppComponent {
             prix: parseInt(prix.value)
         };
         this.articleListe.push(article);
+        window.localStorage.setItem('articles', JSON.stringify(this.articleListe));
         lib.value = "";
         qte.value = "";
         prix.value = "";
     }
     deleteArticles(id) {
         this.articleListe = _Module_biblio__WEBPACK_IMPORTED_MODULE_1__["arrayRemoveId"](this.articleListe, id);
+        window.localStorage.setItem('articles', JSON.stringify(this.articleListe));
     }
     sendCmd($event) {
         let cmd = {
@@ -533,6 +543,7 @@ class AppComponent {
         this.request.sendCmd(cmd)
             .subscribe(result => {
             this.articleListe = [];
+            window.localStorage.setItem('articles', JSON.stringify(this.articleListe));
             this.link = "download/" + result.data;
         });
     }
