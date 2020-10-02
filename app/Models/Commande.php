@@ -25,10 +25,9 @@ class Commande extends Model
         return $this->belongsTo('App\Models\Client');
     }
 
-    public function productCount ()
+    public function products ()
     {
-        $count = Product::where('commande_id', $this->id)->get()->count();
-        return $count;
+        return $this->hasMany('App\Models\Product');
     }
 
 }

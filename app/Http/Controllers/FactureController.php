@@ -23,27 +23,15 @@ class FactureController extends Controller
 
     public function list ()
     {
-        $factures = Commande::with('client')->where('user_id', Auth::id())
+        $factures = Commande::with('client',  'products')->where('user_id', Auth::id())
             ->orderBy('created_at', 'desc')->limit(20)->get();
-
-        foreach ($factures as $facture)
-        {
-            $facture['product_count'] = $facture->productCount();
-        }
-
         return response()->json(['data' => $factures], 200);
     }
 
     public function find (Request $request)
     {
-        $factures = Commande::with('client')->where('user_id', Auth::id())
+        $factures = Commande::with('client', 'products')->where('user_id', Auth::id())
             ->where('ref',  $request->data['item'])->get();
-
-        foreach ($factures as $facture)
-        {
-            $facture['product_count'] = $facture->productCount();
-        }
-
         return response()->json(['data' => $factures], 200);
     }
 

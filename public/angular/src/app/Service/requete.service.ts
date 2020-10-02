@@ -71,7 +71,7 @@ export class RequeteService {
         tva: allFactures.data[i].tva,
         monnaie: allFactures.data[i].monnaie,
         ref: allFactures.data[i].ref,
-        productCount: allFactures.data[i].product_count,
+        productCount: allFactures.data[i].products.length,
         date: b.formatGetDate(allFactures.data[i].created_at)
       }
       factures.push(fac)
@@ -95,7 +95,7 @@ export class RequeteService {
         tva: allFactures.data[i].tva,
         monnaie: allFactures.data[i].monnaie,
         ref: allFactures.data[i].ref,
-        productCount: allFactures.data[i].product_count,
+        productCount: allFactures.data[i].products.length,
         date: b.formatGetDate(allFactures.data[i].created_at)
       }
       factures.push(fac)

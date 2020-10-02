@@ -20,6 +20,7 @@ export class FactureListeComponent implements OnInit {
     this.request.getFactures().then((result) => {
       this.factures = result
     })
+
   }
 
   delete (id: number) {
