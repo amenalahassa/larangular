@@ -67,45 +67,47 @@
   </div>
   <div   class="bgc-white p-20 mB-20 table-responsive" *ngIf="searched === null">
     <h4 class="c-grey-900 mB-20">Listes des factures </h4>
-    <div  *ngIf="factures.length > 0 && factures !== null" >
-      <p>Ce tableau contient les {{ factures.length }} dernières factures délivrées. Utiliser le moteur de recherche pour trouver une facture plus ancienne ou pour en verifier une. </p>
-      <table class="table">
-        <thead>
-        <tr>
-          <th scope="col">Réference</th>
-          <th scope="col">Date</th>
-          <th scope="col">Client</th>
-          <th scope="col">Tel</th>
-          <th scope="col">Adresse</th>
-          <th scope="col">Nombre d'articles achetes</th>
-          <th scope="col">Sous-Total</th>
-          <th scope="col">Total TVA</th>
-          <th scope="col">Monnaie</th>
-          <th scope="col">Reliquat</th>
-          <th scope="col">#</th>
-          <th scope="col">#</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let facture of factures">
-          <th scope="row">{{ facture.ref }}</th>
-          <th scope="row">{{ facture.date }}</th>
-          <th scope="row">{{ facture.client }}</th>
-          <th scope="row">{{ facture.tel }}</th>
-          <th scope="row">{{ facture.adr }}</th>
-          <th scope="row">{{ facture.productCount }}</th>
-          <th scope="row">{{ facture.ssTotal }}</th>
-          <th scope="row">{{ facture.tva }}</th>
-          <th scope="row">{{ facture.monnaie }}</th>
-          <th scope="row">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}}</th>
-          <th><button type="button" class="btn cur-p btn-danger" (click)="delete(facture.id)" >Supprimer</button></th>
-          <th><a href="download/{{facture.id}}" target="_blank"><button type="button" class="btn cur-p btn-primary" >Telécharger</button></a></th>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <div *ngIf="factures.length == 0">
-      <p>Vous n'avez encore aucune facture enregistrées.</p>
+    <div *ngIf="factures !== null">
+      <div  *ngIf="factures.length > 0" >
+        <p>Ce tableau contient les {{ factures.length }} dernières factures délivrées. Utiliser le moteur de recherche pour trouver une facture plus ancienne ou pour en verifier une. </p>
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">Réference</th>
+            <th scope="col">Date</th>
+            <th scope="col">Client</th>
+            <th scope="col">Tel</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Nombre d'articles achetes</th>
+            <th scope="col">Sous-Total</th>
+            <th scope="col">Total TVA</th>
+            <th scope="col">Monnaie</th>
+            <th scope="col">Reliquat</th>
+            <th scope="col">#</th>
+            <th scope="col">#</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let facture of factures">
+            <th scope="row">{{ facture.ref }}</th>
+            <th scope="row">{{ facture.date }}</th>
+            <th scope="row">{{ facture.client }}</th>
+            <th scope="row">{{ facture.tel }}</th>
+            <th scope="row">{{ facture.adr }}</th>
+            <th scope="row">{{ facture.productCount }}</th>
+            <th scope="row">{{ facture.ssTotal }}</th>
+            <th scope="row">{{ facture.tva }}</th>
+            <th scope="row">{{ facture.monnaie }}</th>
+            <th scope="row">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}}</th>
+            <th><button type="button" class="btn cur-p btn-danger" (click)="delete(facture.id)" >Supprimer</button></th>
+            <th><a href="download/{{facture.id}}" target="_blank"><button type="button" class="btn cur-p btn-primary" >Telécharger</button></a></th>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="factures.length == 0">
+        <p>Vous n'avez encore aucune facture enregistrées.</p>
+      </div>
     </div>
   </div>
 </div>

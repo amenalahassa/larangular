@@ -4,7 +4,7 @@
 
     @verbatim
 
-        <la-root></la-root>
+        <la-root id = "main-app"></la-root>
 
     @endverbatim
 

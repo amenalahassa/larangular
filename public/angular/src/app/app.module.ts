@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {Injector, NgModule} from '@angular/core';
+import  { createCustomElement } from '@angular/elements';
+
 
 import { AppComponent } from './app.component';
 import { FactureFormComponent } from './Component/facture-form/facture-form.component';
@@ -10,6 +12,7 @@ import { FactureListeComponent } from './Component/facture-liste/facture-liste.c
 
 @NgModule({
   declarations: [
+    FactureListeComponent,
     AppComponent,
     FactureFormComponent,
     FactureTableComponent,
@@ -21,6 +24,23 @@ import { FactureListeComponent } from './Component/facture-liste/facture-liste.c
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [AppComponent, FactureListeComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(private injector:Injector){}
+
+  ngDoBootstrap(){
+    let main = document.querySelector('#main-app')
+
+    if(main.tagName === "la-facture-liste".toUpperCase()){
+      const AppElement = createCustomElement(FactureListeComponent, {injector: this.injector });
+      customElements.define('la-facture-liste', AppElement);
+    }
+    else {
+      const AppElement = createCustomElement(AppComponent, {injector: this.injector });
+      customElements.define('la-root', AppElement);
+    }
+  }
+
+}

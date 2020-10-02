@@ -4,7 +4,7 @@
 
     @verbatim
 
-        <la-facture-liste></la-facture-liste>
+        <la-facture-liste id="main-app"></la-facture-liste>
 
     @endverbatim
 

@@ -217,8 +217,8 @@ function FactureListeComponent_div_13_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.searched.length == 0);
 } }
-function FactureListeComponent_div_14_div_3_tr_31_Template(rf, ctx) { if (rf & 1) {
-    const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+function FactureListeComponent_div_14_div_3_div_1_tr_31_Template(rf, ctx) { if (rf & 1) {
+    const _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "th", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
@@ -252,7 +252,7 @@ function FactureListeComponent_div_14_div_3_tr_31_Template(rf, ctx) { if (rf & 1
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "th");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "button", 20);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function FactureListeComponent_div_14_div_3_tr_31_Template_button_click_22_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r15); const facture_r13 = ctx.$implicit; const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3); return ctx_r14.delete(facture_r13.id); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function FactureListeComponent_div_14_div_3_div_1_tr_31_Template_button_click_22_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r16); const facture_r14 = ctx.$implicit; const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](4); return ctx_r15.delete(facture_r14.id); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Supprimer");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -265,31 +265,31 @@ function FactureListeComponent_div_14_div_3_tr_31_Template(rf, ctx) { if (rf & 1
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const facture_r13 = ctx.$implicit;
+    const facture_r14 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.ref);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.ref);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.date);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.date);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.client);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.client);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.tel);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.tel);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.adr);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.adr);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.productCount);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.productCount);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.ssTotal);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.ssTotal);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.tva);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.tva);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.monnaie);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.monnaie);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r13.monnaie - (facture_r13.ssTotal + facture_r13.tva));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.monnaie - (facture_r14.ssTotal + facture_r14.tva));
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("href", "download/", facture_r13.id, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("href", "download/", facture_r14.id, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 } }
-function FactureListeComponent_div_14_div_3_Template(rf, ctx) { if (rf & 1) {
+function FactureListeComponent_div_14_div_3_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
@@ -336,38 +336,47 @@ function FactureListeComponent_div_14_div_3_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, FactureListeComponent_div_14_div_3_tr_31_Template, 28, 11, "tr", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, FactureListeComponent_div_14_div_3_div_1_tr_31_Template, 28, 11, "tr", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Ce tableau contient les ", ctx_r10.factures.length, " derni\u00E8res factures d\u00E9livr\u00E9es. Utiliser le moteur de recherche pour trouver une facture plus ancienne ou pour en verifier une. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Ce tableau contient les ", ctx_r11.factures.length, " derni\u00E8res factures d\u00E9livr\u00E9es. Utiliser le moteur de recherche pour trouver une facture plus ancienne ou pour en verifier une. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](29);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r10.factures);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r11.factures);
 } }
-function FactureListeComponent_div_14_div_4_Template(rf, ctx) { if (rf & 1) {
+function FactureListeComponent_div_14_div_3_div_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Vous n'avez encore aucune facture enregistr\u00E9es.");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
+function FactureListeComponent_div_14_div_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, FactureListeComponent_div_14_div_3_div_1_Template, 32, 2, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, FactureListeComponent_div_14_div_3_div_2_Template, 3, 0, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r10.factures.length > 0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r10.factures.length == 0);
+} }
 function FactureListeComponent_div_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h4", 1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Listes des factures ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, FactureListeComponent_div_14_div_3_Template, 32, 2, "div", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, FactureListeComponent_div_14_div_4_Template, 3, 0, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, FactureListeComponent_div_14_div_3_Template, 3, 2, "div", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r1.factures.length > 0 && ctx_r1.factures !== null);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r1.factures.length == 0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r1.factures !== null);
 } }
 class FactureListeComponent {
     constructor(request) {
@@ -438,7 +447,7 @@ FactureListeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, FactureListeComponent_div_13_Template, 10, 2, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, FactureListeComponent_div_14_Template, 5, 2, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, FactureListeComponent_div_14_Template, 4, 1, "div", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
@@ -454,57 +463,6 @@ FactureListeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
                 styleUrls: ['./facture-liste.component.sass']
             }]
     }], function () { return [{ type: _Service_requete_service__WEBPACK_IMPORTED_MODULE_2__["RequeteService"] }]; }, null); })();
-
-
-/***/ }),
-
-/***/ "R53j":
-/*!**************************************************!*\
-  !*** ./src/app/Module/facture/facture.module.ts ***!
-  \**************************************************/
-/*! exports provided: FactureModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FactureModule", function() { return FactureModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Component/facture-liste/facture-liste.component */ "LUrS");
-
-
-
-
-
-
-class FactureModule {
-}
-FactureModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: FactureModule, bootstrap: [_Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_4__["FactureListeComponent"]] });
-FactureModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function FactureModule_Factory(t) { return new (t || FactureModule)(); }, providers: [], imports: [[
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]
-        ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](FactureModule, { imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-        _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]] }); })();
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FactureModule, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
-        args: [{
-                declarations: [],
-                imports: [
-                    _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-                    _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-                    _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]
-                ],
-                providers: [],
-                bootstrap: [
-                    _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_4__["FactureListeComponent"]
-                ]
-            }]
-    }], null, null); })();
 
 
 /***/ }),
@@ -657,12 +615,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "Sy1n");
-/* harmony import */ var _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Component/facture-form/facture-form.component */ "scns");
-/* harmony import */ var _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Component/facture-table/facture-table.component */ "zz/u");
-/* harmony import */ var _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Component/facture-client/facture-client.component */ "b4BC");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Component/facture-liste/facture-liste.component */ "LUrS");
+/* harmony import */ var _angular_elements__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/elements */ "Dti6");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "Sy1n");
+/* harmony import */ var _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Component/facture-form/facture-form.component */ "scns");
+/* harmony import */ var _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Component/facture-table/facture-table.component */ "zz/u");
+/* harmony import */ var _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Component/facture-client/facture-client.component */ "b4BC");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Component/facture-liste/facture-liste.component */ "LUrS");
+
 
 
 
@@ -673,36 +633,53 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class AppModule {
+    constructor(injector) {
+        this.injector = injector;
+    }
+    ngDoBootstrap() {
+        let main = document.querySelector('#main-app');
+        if (main.tagName === "la-facture-liste".toUpperCase()) {
+            const AppElement = Object(_angular_elements__WEBPACK_IMPORTED_MODULE_2__["createCustomElement"])(_Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_8__["FactureListeComponent"], { injector: this.injector });
+            customElements.define('la-facture-liste', AppElement);
+        }
+        else {
+            const AppElement = Object(_angular_elements__WEBPACK_IMPORTED_MODULE_2__["createCustomElement"])(_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], { injector: this.injector });
+            customElements.define('la-root', AppElement);
+        }
+    }
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"])); }, providers: [], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-        _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_3__["FactureFormComponent"],
-        _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_4__["FactureTableComponent"],
-        _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_5__["FactureClientComponent"],
-        _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_7__["FactureListeComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"]] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_8__["FactureListeComponent"],
+        _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+        _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_4__["FactureFormComponent"],
+        _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_5__["FactureTableComponent"],
+        _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_6__["FactureClientComponent"],
+        _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_8__["FactureListeComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
                 declarations: [
-                    _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-                    _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_3__["FactureFormComponent"],
-                    _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_4__["FactureTableComponent"],
-                    _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_5__["FactureClientComponent"],
-                    _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_7__["FactureListeComponent"],
+                    _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_8__["FactureListeComponent"],
+                    _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+                    _Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_4__["FactureFormComponent"],
+                    _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_5__["FactureTableComponent"],
+                    _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_6__["FactureClientComponent"],
+                    _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_8__["FactureListeComponent"],
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                    _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
+                    _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
                 ],
                 providers: [],
-                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
+                // bootstrap: [AppComponent],
+                entryComponents: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _Component_facture_liste_facture_liste_component__WEBPACK_IMPORTED_MODULE_8__["FactureListeComponent"]]
             }]
-    }], null, null); })();
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"] }]; }, null); })();
 
 
 /***/ }),
@@ -1148,21 +1125,17 @@ FactureFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "a3Wg");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./environments/environment */ "AytR");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "ZAI4");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "AytR");
-/* harmony import */ var _app_Module_facture_facture_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app/Module/facture/facture.module */ "R53j");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
 
 
 
 
-
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].production) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
 }
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
-    .catch(err => console.error(err));
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_Module_facture_facture_module__WEBPACK_IMPORTED_MODULE_4__["FactureModule"])
+_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
     .catch(err => console.error(err));
 
 
