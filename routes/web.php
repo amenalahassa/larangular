@@ -30,6 +30,8 @@ Route::get('facture/list',[\App\Http\Controllers\FactureController::class, 'list
 Route::post('facture/delete',[\App\Http\Controllers\FactureController::class, 'delete']);
 Route::post('facture/find',[\App\Http\Controllers\FactureController::class, 'find']);
 
+Route::get('download/{id}',[\App\Http\Controllers\FactureController::class, 'download']);
+
 
 Route::middleware('guest')->group(function () {
     Route::get('/', function () {

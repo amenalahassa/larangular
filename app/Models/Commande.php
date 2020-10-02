@@ -30,4 +30,19 @@ class Commande extends Model
         return $this->hasMany('App\Models\Product');
     }
 
+    public function ssTotal ()
+    {
+        $sstotal = 0;
+        foreach ($this->products as $product)
+        {
+            $sstotal += $product->qte * $product->prix;
+        }
+        return $sstotal;
+    }
+
+    public function tva ()
+    {
+        return ($this->ssTotal() * 18) / 100;
+    }
+
 }

@@ -46,10 +46,10 @@ class FactureController extends Controller
 
     public function download ($id)
     {
-        $convocation = Commande::find($id);
-        view()->share('convocation', $convocation);
-        $pdfs = PDF::loadView('pages.pdf.convocation', $convocation)->setPaper('a4')->setOption('images', true)->setOption('no-outline', true);
-        return $pdfs->download('Convocation-' . $convocation->identifiant . '.pdf');
+        $commande = Commande::find($id);
+        view()->share('commande', $commande);
+        $pdfs = PDF::loadView('pdf.facture', $commande)->setPaper('a4')->setOption('images', true)->setOption('no-outline', true);
+        return $pdfs->download('Facture - ' . $commande->ref . '.pdf');
     }
 
 

@@ -15,4 +15,9 @@ class Product extends Model
         'prix',
         'qte'
     ];
+
+    public function article ()
+    {
+        return $this->belongsTo('App\Models\Article');
+    }
 }
