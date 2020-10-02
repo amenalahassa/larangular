@@ -19,7 +19,15 @@ export function gIE(selector:string) {
 
 export function formatGetDate(date:string) {
   let day = date.split('T')[0]
-  day = day.split('-')[2] + "-" + day.split('-')[1] + "-" + day.split('-')[0]
   let hour = date.split('T')[1].split('.')[0]
-  return day + " à " + hour
+  let dateLocale:any = new Date(parseInt(day.split('-')[0]) , parseInt(day.split('-')[1]) - 1, parseInt(day.split('-')[2]), parseInt(hour.split(':')[0]), parseInt(hour.split(':')[1]), parseInt(hour.split(':')[2]))
+  dateLocale =  dateLocale.toLocaleString('fr-FR',{
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'});
+  return dateLocale
 }

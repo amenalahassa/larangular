@@ -223,7 +223,7 @@ function FactureListeComponent_div_14_div_3_div_1_tr_31_Template(rf, ctx) { if (
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "th", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "th", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "th", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "th", 19);
@@ -420,7 +420,7 @@ class FactureListeComponent {
     }
 }
 FactureListeComponent.ɵfac = function FactureListeComponent_Factory(t) { return new (t || FactureListeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_Service_requete_service__WEBPACK_IMPORTED_MODULE_2__["RequeteService"])); };
-FactureListeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureListeComponent, selectors: [["la-facture-liste"]], decls: 15, vars: 2, consts: [[1, "bgc-white", "p-20"], [1, "c-grey-900", "mB-20"], [1, "mT-30"], [1, "container"], [1, "row"], [1, "col-md-6", "mb-3"], ["type", "search", "id", "ref", "placeholder", "FAC/2020-10-01/8699", "required", "", 1, "form-control", 3, "keyup"], [1, "col-md-6", "mb-3", "to-align-right"], [1, "peer"], ["type", "submit", "id", "btn-search", "disabled", "", 1, "btn", "cur-p", "btn-primary", 3, "click"], ["class", "bgc-white p-20 mB-20 table-responsive", 4, "ngIf"], [1, "bgc-white", "p-20", "mB-20", "table-responsive"], [1, "col-md-9", "c-grey-900", "mB-20"], [1, "col-md-3", "mb-3", "to-align-right"], ["type", "button", 1, "btn", "cur-p", "btn-success", 3, "click"], [4, "ngIf"], [1, "table"], ["scope", "col"], [4, "ngFor", "ngForOf"], ["scope", "row"], ["type", "button", 1, "btn", "cur-p", "btn-danger", 3, "click"], ["target", "_blank", 3, "href"], ["type", "button", 1, "btn", "cur-p", "btn-primary"]], template: function FactureListeComponent_Template(rf, ctx) { if (rf & 1) {
+FactureListeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureListeComponent, selectors: [["la-facture-liste"]], decls: 15, vars: 2, consts: [[1, "bgc-white", "p-20"], [1, "c-grey-900", "mB-20"], [1, "mT-30"], [1, "container"], [1, "row"], [1, "col-md-6", "mb-3"], ["type", "search", "id", "ref", "placeholder", "FAC/2020-10-01/8699", "required", "", 1, "form-control", 3, "keyup"], [1, "col-md-6", "mb-3", "to-align-right"], [1, "peer"], ["type", "submit", "id", "btn-search", "disabled", "", 1, "btn", "cur-p", "btn-primary", 3, "click"], ["class", "bgc-white p-20 mB-20 table-responsive", 4, "ngIf"], [1, "bgc-white", "p-20", "mB-20", "table-responsive"], [1, "col-md-9", "c-grey-900", "mB-20"], [1, "col-md-3", "mb-3", "to-align-right"], ["type", "button", 1, "btn", "cur-p", "btn-success", 3, "click"], [4, "ngIf"], [1, "table"], ["scope", "col"], [4, "ngFor", "ngForOf"], ["scope", "row"], ["type", "button", 1, "btn", "cur-p", "btn-danger", 3, "click"], ["target", "_blank", 3, "href"], ["type", "button", 1, "btn", "cur-p", "btn-primary"], ["scope", "row", 1, "capitalise"]], template: function FactureListeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h4", 1);
@@ -454,7 +454,7 @@ FactureListeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.searched !== null);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.searched === null);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]], styles: [".to-align-right[_ngcontent-%COMP%] {\n  text-align: right;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtbGlzdGUvZmFjdHVyZS1saXN0ZS5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudC9mYWN0dXJlLWxpc3RlL2ZhY3R1cmUtbGlzdGUuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudG8tYWxpZ24tcmlnaHQge1xuICB0ZXh0LWFsaWduOiByaWdodDsgfVxuIl19 */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]], styles: [".to-align-right[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\nth.capitalise[_ngcontent-%COMP%] {\n  text-transform: capitalize;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtbGlzdGUvZmFjdHVyZS1saXN0ZS5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLDBCQUEwQjtBQUM1QiIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudC9mYWN0dXJlLWxpc3RlL2ZhY3R1cmUtbGlzdGUuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudG8tYWxpZ24tcmlnaHQge1xuICB0ZXh0LWFsaWduOiByaWdodDsgfVxuXG5cbnRoLmNhcGl0YWxpc2Uge1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTsgfVxuIl19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FactureListeComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -595,9 +595,18 @@ function gIE(selector) {
 }
 function formatGetDate(date) {
     let day = date.split('T')[0];
-    day = day.split('-')[2] + "-" + day.split('-')[1] + "-" + day.split('-')[0];
     let hour = date.split('T')[1].split('.')[0];
-    return day + " à " + hour;
+    let dateLocale = new Date(parseInt(day.split('-')[0]), parseInt(day.split('-')[1]) - 1, parseInt(day.split('-')[2]), parseInt(hour.split(':')[0]), parseInt(hour.split(':')[1]), parseInt(hour.split(':')[2]));
+    dateLocale = dateLocale.toLocaleString('fr-FR', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric'
+    });
+    return dateLocale;
 }
 
 
@@ -1315,7 +1324,7 @@ FactureTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.tva(), " fr");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.sousTotal() + ctx.tva(), " fr");
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: [".to-align-right[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\n.table-responsive[_ngcontent-%COMP%] {\n  overflow-x: scroll;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n\n.table-responsive[_ngcontent-%COMP%]::-webkit-scrollbar {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtdGFibGUvZmFjdHVyZS10YWJsZS5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQix3QkFBd0I7RUFDeEIscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsYUFBYTtBQUNmIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtdGFibGUvZmFjdHVyZS10YWJsZS5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi50by1hbGlnbi1yaWdodCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0OyB9XG5cblxuLnRhYmxlLXJlc3BvbnNpdmUge1xuICBvdmVyZmxvdy14OiBzY3JvbGw7XG4gIC1tcy1vdmVyZmxvdy1zdHlsZTogbm9uZSAgLyogSUUgYW5kIEVkZ2UgKi87XG4gIHNjcm9sbGJhci13aWR0aDogbm9uZSAgLyogRmlyZWZveCAqLzsgfVxuXG5cbi50YWJsZS1yZXNwb25zaXZlOjotd2Via2l0LXNjcm9sbGJhciB7XG4gIGRpc3BsYXk6IG5vbmU7IH1cbiJdfQ== */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: [".to-align-right[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\n.table-responsive[_ngcontent-%COMP%] {\n  overflow-x: scroll;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n\n.table-responsive[_ngcontent-%COMP%]::-webkit-scrollbar {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtdGFibGUvZmFjdHVyZS10YWJsZS5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQix3QkFBd0I7RUFDeEIscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsYUFBYTtBQUNmIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtdGFibGUvZmFjdHVyZS10YWJsZS5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi50by1hbGlnbi1yaWdodCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0OyB9XG5cblxuLnRhYmxlLXJlc3BvbnNpdmUge1xuICBvdmVyZmxvdy14OiBzY3JvbGw7XG4gIC1tcy1vdmVyZmxvdy1zdHlsZTogbm9uZSAgLyogSUUgYW5kIEVkZ2UgKi87XG4gIHNjcm9sbGJhci13aWR0aDogbm9uZSAgLyogRmlyZWZveCAqLzsgfVxuXG5cbi50YWJsZS1yZXNwb25zaXZlOjotd2Via2l0LXNjcm9sbGJhciB7XG4gIGRpc3BsYXk6IG5vbmU7IH1cblxuIl19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FactureTableComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
