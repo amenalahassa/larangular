@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 
+Route::get('/about', [\App\Http\Controllers\UserController::class, 'show'])->name('about.user');
+Route::post('/about', [\App\Http\Controllers\UserController::class, 'save']);
+
+
 Route::get('/home', [\App\Http\Controllers\FactureController::class, 'index'])->name('home');
 Route::get('/list', [\App\Http\Controllers\FactureController::class, 'show'])->name('list');
 
