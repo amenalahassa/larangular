@@ -19,6 +19,7 @@ export class RequeteService {
     getFactures : 'facture/list',
     findFactures : 'facture/find',
     deleteFacture:"facture/delete",
+    infoUser:"user/info",
   }
 
 
@@ -101,5 +102,10 @@ export class RequeteService {
       factures.push(fac)
     }
     return factures
+  }
+
+  async getUserInfo() {
+    let result = await this.http.get(this.url.infoUser).toPromise()
+    return result
   }
 }

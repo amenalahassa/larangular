@@ -10,6 +10,7 @@ import * as b from '../../Module/biblio'
 export class FactureTableComponent implements OnInit {
 
   @Input() liste : Array<any>
+  @Input() user : any
   @Output() deleteArticle = new EventEmitter<number>()
 
 
@@ -34,7 +35,7 @@ export class FactureTableComponent implements OnInit {
 
   tva () : number
   {
-    return (this.sousTotal() * 18) / 100
+    return (this.sousTotal() * this.user?.tva) / 100
   }
 
 

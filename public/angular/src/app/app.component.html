@@ -1,5 +1,5 @@
 <div class="masonry-item row">
   <la-facture-form class="to-set-width" (addArticle)="addAticles()" [link]="link"></la-facture-form>
-  <la-facture-table *ngIf="articleListe.length > 0" [liste] = "articleListe" (deleteArticle)="deleteArticles($event)" class="to-set-width"></la-facture-table>
-  <la-facture-client  class="to-set-width" [liste] = "articleListe" (getClient)="sendCmd($event)" ></la-facture-client>
+  <la-facture-table *ngIf="articleListe.length > 0" [liste] = "articleListe" (deleteArticle)="deleteArticles($event)" [user] = "user" class="to-set-width"></la-facture-table>
+  <la-facture-client  class="to-set-width" [liste] = "articleListe" (getClient)="sendCmd($event)" [user] = "user"></la-facture-client>
 </div>

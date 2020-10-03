@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Models\Client;
 use App\Models\Commande;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -58,7 +59,7 @@ class CommandeController extends Controller
             'monnaie' => $client['monnaie'],
             'ssTotal' => $total,
             'tva' => $this->tva($total),
-            'ref' => 'FAC/'. date("Y-m-d") . '/' . str_pad($count + 1, 4, '0', STR_PAD_LEFT),
+            'ref' => 'FAC/'. Auth::user()->ref . '/' . date("Y-m-d") . '/' . str_pad($count + 1, 4, '0', STR_PAD_LEFT),
         ]);
         $this->createProduct($products, $cmd->id);
 
@@ -78,7 +79,7 @@ class CommandeController extends Controller
 
     private function tva ($total)
     {
-        return ($total * 18) / 100;
+        return ($total * Auth::user()->tva) / 100;
     }
 
     private function createProduct ($products, $cmd_id)

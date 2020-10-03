@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {RequeteService} from "../../Service/requete.service";
 import {Facture} from "../../Interface/facture";
 import * as b from '../../Module/biblio'
+import {DataModel} from "../../Interface/data-model";
 
 @Component({
   selector: 'la-facture-liste',
@@ -12,11 +13,16 @@ export class FactureListeComponent implements OnInit {
 
   factures:Array<Facture> = null
   searched:Array<Facture> = null
+  user:any
+
 
   constructor(private request: RequeteService) { }
 
   ngOnInit (): void {
     this.factures = null
+    this.request.getUserInfo().then((result: DataModel) => {
+      this.user = result.data
+    })
     this.request.getFactures().then((result) => {
       this.factures = result
     })

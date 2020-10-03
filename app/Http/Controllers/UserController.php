@@ -27,11 +27,21 @@ class UserController extends Controller
         }
         $user = Auth::user();
         $user->img = $path;
-        $user->fill($request->only(['tel', 'adr', 'tva', 'devise',
-            'ref']));
+        $user->ref = strtoupper($request->ref);
+        $user->fill($request->only(['tel', 'adr', 'tva', 'devise']));
         $user->save();
         return redirect()->route('home');
 
+    }
+
+    public function info () {
+        if (Auth::check()){
+            $data = [];
+            $data['tva'] = Auth::user()->tva;
+            $data['devise'] = Auth::user()->devise;
+            return response()->json(['data' => $data], 200);
+        }
+        return response()->json(null, 204);
     }
 
 }

@@ -16,6 +16,7 @@ export class FactureClientComponent implements OnInit {
 
 
   @Input() liste : Array<any>
+  @Input() user : any
   @Output() getClient = new EventEmitter<Client>()
 
 
@@ -34,7 +35,7 @@ export class FactureClientComponent implements OnInit {
       reliquat.value = ""
     }
     else {
-      reliquat.value = (monnaie - this.netToPay()).toString() + " fr"
+      reliquat.value = (monnaie - this.netToPay()).toString() + " " + this.user?.devise
     }
   }
 
@@ -47,7 +48,7 @@ export class FactureClientComponent implements OnInit {
       total += (this.liste[i].qte * this.liste[i].prix)
     }
 
-    return ((total * 18) / 100) + total
+    return ((total * this.user?.tva) / 100) + total
   }
 
   search($event: KeyboardEvent) {

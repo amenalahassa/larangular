@@ -266,6 +266,7 @@ function FactureListeComponent_div_14_div_3_div_1_tr_31_Template(rf, ctx) { if (
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const facture_r14 = ctx.$implicit;
+    const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.ref);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
@@ -279,13 +280,13 @@ function FactureListeComponent_div_14_div_3_div_1_tr_31_Template(rf, ctx) { if (
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.productCount);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.ssTotal);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", facture_r14.ssTotal, " ", " " + (ctx_r13.user == null ? null : ctx_r13.user.devise), "");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.tva);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", facture_r14.tva, " ", " " + (ctx_r13.user == null ? null : ctx_r13.user.devise), "");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.monnaie);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", facture_r14.monnaie, " ", " " + (ctx_r13.user == null ? null : ctx_r13.user.devise), "");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](facture_r14.monnaie - (facture_r14.ssTotal + facture_r14.tva));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", facture_r14.monnaie - (facture_r14.ssTotal + facture_r14.tva), " ", " " + (ctx_r13.user == null ? null : ctx_r13.user.devise), "");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("href", "download/", facture_r14.id, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 } }
@@ -336,7 +337,7 @@ function FactureListeComponent_div_14_div_3_div_1_Template(rf, ctx) { if (rf & 1
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, FactureListeComponent_div_14_div_3_div_1_tr_31_Template, 28, 11, "tr", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, FactureListeComponent_div_14_div_3_div_1_tr_31_Template, 28, 15, "tr", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -386,6 +387,9 @@ class FactureListeComponent {
     }
     ngOnInit() {
         this.factures = null;
+        this.request.getUserInfo().then((result) => {
+            this.user = result.data;
+        });
         this.request.getFactures().then((result) => {
             this.factures = result;
         });
@@ -499,7 +503,7 @@ function AppComponent_la_facture_table_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("liste", ctx_r0.articleListe);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("liste", ctx_r0.articleListe)("user", ctx_r0.user);
 } }
 class AppComponent {
     constructor(request) {
@@ -514,11 +518,14 @@ class AppComponent {
                 this.articleListe = articles;
             }
         }
+        this.request.getUserInfo().then((result) => {
+            this.user = result.data;
+        });
     }
     addAticles() {
-        let lib = document.querySelector('#libelle');
-        let qte = document.querySelector('#qte');
-        let prix = document.querySelector('#prix');
+        let lib = _Module_biblio__WEBPACK_IMPORTED_MODULE_1__["gIE"]('#libelle');
+        let qte = _Module_biblio__WEBPACK_IMPORTED_MODULE_1__["gIE"]('#qte');
+        let prix = _Module_biblio__WEBPACK_IMPORTED_MODULE_1__["gIE"]('#prix');
         let article = {
             id: Date.now(),
             lib: lib.value,
@@ -549,12 +556,12 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_Service_requete_service__WEBPACK_IMPORTED_MODULE_2__["RequeteService"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["la-root"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([])], decls: 4, vars: 3, consts: [[1, "masonry-item", "row"], [1, "to-set-width", 3, "link", "addArticle"], ["class", "to-set-width", 3, "liste", "deleteArticle", 4, "ngIf"], [1, "to-set-width", 3, "liste", "getClient"], [1, "to-set-width", 3, "liste", "deleteArticle"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["la-root"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([])], decls: 4, vars: 4, consts: [[1, "masonry-item", "row"], [1, "to-set-width", 3, "link", "addArticle"], ["class", "to-set-width", 3, "liste", "user", "deleteArticle", 4, "ngIf"], [1, "to-set-width", 3, "liste", "user", "getClient"], [1, "to-set-width", 3, "liste", "user", "deleteArticle"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "la-facture-form", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("addArticle", function AppComponent_Template_la_facture_form_addArticle_1_listener() { return ctx.addAticles(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, AppComponent_la_facture_table_2_Template, 1, 1, "la-facture-table", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, AppComponent_la_facture_table_2_Template, 1, 2, "la-facture-table", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "la-facture-client", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("getClient", function AppComponent_Template_la_facture_client_getClient_3_listener($event) { return ctx.sendCmd($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -565,7 +572,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.articleListe.length > 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("liste", ctx.articleListe);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("liste", ctx.articleListe)("user", ctx.user);
     } }, directives: [_Component_facture_form_facture_form_component__WEBPACK_IMPORTED_MODULE_3__["FactureFormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _Component_facture_client_facture_client_component__WEBPACK_IMPORTED_MODULE_5__["FactureClientComponent"], _Component_facture_table_facture_table_component__WEBPACK_IMPORTED_MODULE_6__["FactureTableComponent"]], styles: [".to-set-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0UsV0FBVztBQUFiIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiXG4udG8tc2V0LXdpZHRoIHtcbiAgd2lkdGg6IDEwMCU7IH1cbiJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -737,22 +744,24 @@ class FactureClientComponent {
     ngOnInit() {
     }
     updateReliquat($event) {
+        var _a;
         let monnaie = parseInt($event.target.value);
         let reliquat = (_Module_biblio__WEBPACK_IMPORTED_MODULE_1__["gIE"]('#reliquat'));
         if (isNaN(monnaie - this.netToPay())) {
             reliquat.value = "";
         }
         else {
-            reliquat.value = (monnaie - this.netToPay()).toString() + " fr";
+            reliquat.value = (monnaie - this.netToPay()).toString() + " " + ((_a = this.user) === null || _a === void 0 ? void 0 : _a.devise);
         }
     }
     netToPay() {
+        var _a;
         let total = 0;
         let i = 0;
         for (i = 0; i < this.liste.length; i++) {
             total += (this.liste[i].qte * this.liste[i].prix);
         }
-        return ((total * 18) / 100) + total;
+        return ((total * ((_a = this.user) === null || _a === void 0 ? void 0 : _a.tva)) / 100) + total;
     }
     search($event) {
         let input = $event.target.value;
@@ -790,7 +799,7 @@ class FactureClientComponent {
     }
 }
 FactureClientComponent.ɵfac = function FactureClientComponent_Factory(t) { return new (t || FactureClientComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_Service_requete_service__WEBPACK_IMPORTED_MODULE_2__["RequeteService"])); };
-FactureClientComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureClientComponent, selectors: [["la-facture-client"]], inputs: { liste: "liste" }, outputs: { getClient: "getClient" }, decls: 43, vars: 1, consts: [["id", "modalAboutClient", "data-backdrop", "static", "data-keyboard", "false", "tabindex", "-1", "role", "dialog", "aria-labelledby", "exampleModalLabel", "aria-hidden", "true", 1, "modal", "fade"], ["role", "document", 1, "modal-dialog", "modal-dialog-centered", "modal-dialog-scrollable"], [1, "container", "form-client"], [1, "modal-content"], [1, "modal-header"], ["id", "modaltitle", 1, "modal-title"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "close"], ["aria-hidden", "true"], [1, "modal-body"], [1, "bgc-white"], [1, "row"], [1, "col-md-12", "mb-3"], ["for", "name"], ["type", "text", "list", "clients", "id", "name", "required", "", 1, "form-control", 3, "keyup"], ["id", "clients"], [3, "value", 4, "ngFor", "ngForOf"], [1, "col-md-6", "mb-3"], ["for", "tel"], ["type", "tel", "id", "tel", "required", "", 1, "form-control"], ["for", "adr"], ["type", "text", "id", "adr", 1, "form-control"], ["for", "monnaie"], ["type", "number", "min", "1", "id", "monnaie", "required", "", 1, "form-control", 3, "focus", "keyup"], ["for", "reliquat"], ["type", "text", "id", "reliquat", "readonly", "", 1, "form-control"], [1, "modal-footer"], ["type", "button", "id", "btn-close", "data-dismiss", "modal", 1, "btn", "btn-secondary"], ["type", "submit", 1, "btn", "btn-primary", 3, "click"], [3, "value"]], template: function FactureClientComponent_Template(rf, ctx) { if (rf & 1) {
+FactureClientComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureClientComponent, selectors: [["la-facture-client"]], inputs: { liste: "liste", user: "user" }, outputs: { getClient: "getClient" }, decls: 43, vars: 1, consts: [["id", "modalAboutClient", "data-backdrop", "static", "data-keyboard", "false", "tabindex", "-1", "role", "dialog", "aria-labelledby", "exampleModalLabel", "aria-hidden", "true", 1, "modal", "fade"], ["role", "document", 1, "modal-dialog", "modal-dialog-centered", "modal-dialog-scrollable"], [1, "container", "form-client"], [1, "modal-content"], [1, "modal-header"], ["id", "modaltitle", 1, "modal-title"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "close"], ["aria-hidden", "true"], [1, "modal-body"], [1, "bgc-white"], [1, "row"], [1, "col-md-12", "mb-3"], ["for", "name"], ["type", "text", "list", "clients", "id", "name", "required", "", 1, "form-control", 3, "keyup"], ["id", "clients"], [3, "value", 4, "ngFor", "ngForOf"], [1, "col-md-6", "mb-3"], ["for", "tel"], ["type", "tel", "id", "tel", "required", "", 1, "form-control"], ["for", "adr"], ["type", "text", "id", "adr", 1, "form-control"], ["for", "monnaie"], ["type", "number", "min", "1", "id", "monnaie", "required", "", 1, "form-control", 3, "focus", "keyup"], ["for", "reliquat"], ["type", "text", "id", "reliquat", "readonly", "", 1, "form-control"], [1, "modal-footer"], ["type", "button", "id", "btn-close", "data-dismiss", "modal", 1, "btn", "btn-secondary"], ["type", "submit", 1, "btn", "btn-primary", 3, "click"], [3, "value"]], template: function FactureClientComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "form", 2);
@@ -880,6 +889,8 @@ FactureClientComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
             }]
     }], function () { return [{ type: _Service_requete_service__WEBPACK_IMPORTED_MODULE_2__["RequeteService"] }]; }, { liste: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], user: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], getClient: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }] }); })();
@@ -916,6 +927,7 @@ class RequeteService {
             getFactures: 'facture/list',
             findFactures: 'facture/find',
             deleteFacture: "facture/delete",
+            infoUser: "user/info",
         };
         this.data = {
             _token: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
@@ -991,6 +1003,12 @@ class RequeteService {
                 factures.push(fac);
             }
             return factures;
+        });
+    }
+    getUserInfo() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            let result = yield this.http.get(this.url.infoUser).toPromise();
+            return result;
         });
     }
 }
@@ -1222,14 +1240,15 @@ function FactureTableComponent_tr_23_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const item_r1 = ctx.$implicit;
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r1.lib);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](item_r1.qte);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", item_r1.prix, " fr ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", item_r1.prix + " " + (ctx_r0.user == null ? null : ctx_r0.user.devise), " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", item_r1.qte * item_r1.prix, " fr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", item_r1.qte * item_r1.prix, " ", " " + (ctx_r0.user == null ? null : ctx_r0.user.devise), " ");
 } }
 class FactureTableComponent {
     constructor() {
@@ -1246,14 +1265,15 @@ class FactureTableComponent {
         return total;
     }
     tva() {
-        return (this.sousTotal() * 18) / 100;
+        var _a;
+        return (this.sousTotal() * ((_a = this.user) === null || _a === void 0 ? void 0 : _a.tva)) / 100;
     }
     triggerDelete(id) {
         this.deleteArticle.emit(id);
     }
 }
 FactureTableComponent.ɵfac = function FactureTableComponent_Factory(t) { return new (t || FactureTableComponent)(); };
-FactureTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureTableComponent, selectors: [["la-facture-table"]], inputs: { liste: "liste" }, outputs: { deleteArticle: "deleteArticle" }, decls: 44, vars: 4, consts: [[1, "col-md-12"], [1, "bgc-white", "p-20", "mB-20", "table-responsive"], [1, "row"], [1, "col-md-9", "c-grey-900", "mB-20"], [1, "col-md-3", "mb-3", "to-align-right"], [1, "peer"], ["type", "button", "data-toggle", "modal", "data-target", "#modalAboutClient", 1, "btn", "cur-p", "btn-success"], [1, "table", "table-bordered"], [1, "thead-dark"], ["scope", "col"], [4, "ngFor", "ngForOf"], ["colspan", "4"], ["scope", "row"], ["type", "button", 1, "btn", "cur-p", "btn-danger", 3, "click"]], template: function FactureTableComponent_Template(rf, ctx) { if (rf & 1) {
+FactureTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FactureTableComponent, selectors: [["la-facture-table"]], inputs: { liste: "liste", user: "user" }, outputs: { deleteArticle: "deleteArticle" }, decls: 44, vars: 8, consts: [[1, "col-md-12"], [1, "bgc-white", "p-20", "mB-20", "table-responsive"], [1, "row"], [1, "col-md-9", "c-grey-900", "mB-20"], [1, "col-md-3", "mb-3", "to-align-right"], [1, "peer"], ["type", "button", "data-toggle", "modal", "data-target", "#modalAboutClient", 1, "btn", "cur-p", "btn-success"], [1, "table", "table-bordered"], [1, "thead-dark"], ["scope", "col"], [4, "ngFor", "ngForOf"], ["colspan", "4"], ["scope", "row"], ["type", "button", 1, "btn", "cur-p", "btn-danger", 3, "click"]], template: function FactureTableComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -1289,7 +1309,7 @@ FactureTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "tbody");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, FactureTableComponent_tr_23_Template, 12, 4, "tr", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, FactureTableComponent_tr_23_Template, 12, 5, "tr", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "tr");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "td", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Sous-Total");
@@ -1303,7 +1323,7 @@ FactureTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Taux d'imposition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "18%");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "tr");
@@ -1330,11 +1350,13 @@ FactureTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](23);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.liste);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.sousTotal(), " fr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.tva(), " fr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx.sousTotal(), " ", " " + (ctx.user == null ? null : ctx.user.devise), "");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.sousTotal() + ctx.tva(), " fr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.user == null ? null : ctx.user.tva, "%");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx.tva(), " ", " " + (ctx.user == null ? null : ctx.user.devise), "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx.sousTotal() + ctx.tva(), " ", " " + (ctx.user == null ? null : ctx.user.devise), "");
     } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: [".to-align-right[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\n.table-responsive[_ngcontent-%COMP%] {\n  overflow-x: scroll;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n\n.table-responsive[_ngcontent-%COMP%]::-webkit-scrollbar {\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtdGFibGUvZmFjdHVyZS10YWJsZS5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQix3QkFBd0I7RUFDeEIscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsYUFBYTtBQUNmIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50L2ZhY3R1cmUtdGFibGUvZmFjdHVyZS10YWJsZS5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi50by1hbGlnbi1yaWdodCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0OyB9XG5cblxuLnRhYmxlLXJlc3BvbnNpdmUge1xuICBvdmVyZmxvdy14OiBzY3JvbGw7XG4gIC1tcy1vdmVyZmxvdy1zdHlsZTogbm9uZSAgLyogSUUgYW5kIEVkZ2UgKi87XG4gIHNjcm9sbGJhci13aWR0aDogbm9uZSAgLyogRmlyZWZveCAqLzsgfVxuXG5cbi50YWJsZS1yZXNwb25zaXZlOjotd2Via2l0LXNjcm9sbGJhciB7XG4gIGRpc3BsYXk6IG5vbmU7IH1cblxuIl19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FactureTableComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -1344,6 +1366,8 @@ FactureTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
                 styleUrls: ['./facture-table.component.sass']
             }]
     }], function () { return []; }, { liste: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], user: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], deleteArticle: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]

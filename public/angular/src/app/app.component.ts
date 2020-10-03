@@ -3,6 +3,7 @@ import * as b from './Module/biblio'
 import {Article} from "./Interface/article";
 import {Client} from "./Interface/client";
 import {RequeteService} from "./Service/requete.service";
+import {DataModel} from "./Interface/data-model";
 
 @Component({
   selector: 'la-root',
@@ -14,6 +15,7 @@ export class AppComponent {
 
   articleListe: Array<Article> = []
   link: string = null
+  user:object
 
   constructor (private request:RequeteService) {
 
@@ -27,12 +29,15 @@ export class AppComponent {
         this.articleListe = articles
       }
     }
+    this.request.getUserInfo().then((result: DataModel) => {
+      this.user = result.data
+    })
   }
 
   addAticles () {
-    let lib = <HTMLInputElement>document.querySelector('#libelle')
-    let qte = <HTMLInputElement>document.querySelector('#qte')
-    let prix = <HTMLInputElement>document.querySelector('#prix')
+    let lib = b.gIE('#libelle')
+    let qte = b.gIE('#qte')
+    let prix = b.gIE('#prix')
 
     let article : Article = {
       id: Date.now(),

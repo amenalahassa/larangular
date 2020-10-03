@@ -25,6 +25,11 @@ class Commande extends Model
         return $this->belongsTo('App\Models\Client');
     }
 
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+
     public function products ()
     {
         return $this->hasMany('App\Models\Product');
@@ -42,7 +47,7 @@ class Commande extends Model
 
     public function tva ()
     {
-        return ($this->ssTotal() * 18) / 100;
+        return ($this->ssTotal() * $this->user->tva) / 100;
     }
 
 }

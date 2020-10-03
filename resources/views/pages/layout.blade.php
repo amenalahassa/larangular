@@ -155,7 +155,7 @@
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
                             <div class="peer mR-10">
-                                <img class="w-3r bdrs-50p" src="{{ asset('storage/'. Auth::user()->img) }}" alt="">
+                                <img class="w-3r bdrs-50p" src="{{ asset(Auth::user()->img !== "" ? 'storage/'. Auth::user()->img : 'images/larangular.png') }}" alt="">
                             </div>
                             <div class="peer">
                                 <span class="fsz-sm c-grey-900">{{ Auth::user()->name }}</span>

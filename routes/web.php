@@ -26,6 +26,12 @@ Route::get('/home', [\App\Http\Controllers\FactureController::class, 'index'])->
 Route::get('/list', [\App\Http\Controllers\FactureController::class, 'show'])->name('list');
 
 
+Route::prefix('user')->group(function () {
+    Route::get('info',[\App\Http\Controllers\UserController::class, 'info']);
+
+});
+
+
 Route::post('article/find',[\App\Http\Controllers\CommandeController::class, 'findArticle']);
 Route::post('commande/save',[\App\Http\Controllers\CommandeController::class, 'saveCmd']);
 Route::post('client/find',[\App\Http\Controllers\CommandeController::class, 'findClient']);

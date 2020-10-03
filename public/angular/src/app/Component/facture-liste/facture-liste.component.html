@@ -5,7 +5,7 @@
       <form class="container ">
         <div class="row">
           <div class="col-md-6 mb-3">
-            <input type="search" id="ref" (keyup)="verify()"  class="form-control" placeholder="FAC/2020-10-01/8699" required>
+            <input type="search" id="ref" (keyup)="verify()"  class="form-control" placeholder="FAC/BME/2020-10-03/0004" required>
           </div>
           <div class="col-md-6 mb-3 to-align-right">
             <div class="peer">
@@ -95,10 +95,10 @@
             <th scope="row">{{ facture.tel }}</th>
             <th scope="row">{{ facture.adr }}</th>
             <th scope="row">{{ facture.productCount }}</th>
-            <th scope="row">{{ facture.ssTotal }}</th>
-            <th scope="row">{{ facture.tva }}</th>
-            <th scope="row">{{ facture.monnaie }}</th>
-            <th scope="row">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}}</th>
+            <th scope="row">{{ facture.ssTotal }} {{" " + user?.devise }}</th>
+            <th scope="row">{{ facture.tva }} {{" " + user?.devise }}</th>
+            <th scope="row">{{ facture.monnaie }} {{" " + user?.devise }}</th>
+            <th scope="row">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}} {{" " + user?.devise }}</th>
             <th><button type="button" class="btn cur-p btn-danger" (click)="delete(facture.id)" >Supprimer</button></th>
             <th><a href="download/{{facture.id}}" target="_blank"><button type="button" class="btn cur-p btn-primary" >Telécharger</button></a></th>
           </tr>

@@ -51,7 +51,7 @@
             animation: sk-scaleout 1.0s infinite ease-in-out;
         }
 
-        @-webkit-keyframes sk-scaleout {
+        @-webkit-keames sk-scaleout {
             0% { -webkit-transform: scale(0) }
             100% {
                 -webkit-transform: scale(1.0);
@@ -59,7 +59,7 @@
             }
         }
 
-        @keyframes sk-scaleout {
+        @keames sk-scaleout {
             0% {
                 -webkit-transform: scale(0);
                 transform: scale(0);
@@ -82,8 +82,8 @@
                                <tbody>
                                <tr>
                                    <td  >
-                                       <img class="about-ent-logo" alt="" class="" src="data:image/jpg;base64,{{ base64_encode(@file_get_contents(asset('images/larangular.png'))) }}"/>
-                                       <h4 class="about-ent-name" >Supermarche Dina</h4>
+                                       <img class="about-ent-logo" alt="" class="" src="data:image/jpg;base64,{{ base64_encode(@file_get_contents(asset( $commande->user->img !== "" ? 'storage/'. $commande->user->img : 'images/larangular.png'))) }}"/>
+                                       <h4 class="about-ent-name" >{{ $commande->user->name}}</h4>
                                    </td>
                                </tr>
                                </tbody>
@@ -103,8 +103,9 @@
                                    <td class="about-fac-this">
                                        <h4>{{$commande->ref}}</h4>
                                        <h6>{{ formatDateFrench(explode(" ", $commande->created_at)[0]) }} à {{ explode(" ", $commande->created_at)[1] }}</h6>
-                                       <h6>Adresse de l'entreprise</h6>
-                                       <h6>Email de l'entreprise</h6>
+                                       <h6>{{ $commande->user->tel}}</h6>
+                                       <h6>{{ $commande->user->adr}}</h6>
+                                       <h6>{{ $commande->user->email}}</h6>
                                    </td>
                                </tr>
                                </tbody>
@@ -129,33 +130,33 @@
                                    <tr >
                                        <th scope="row">{{ $product->article->libelle }}</th>
                                        <td>{{$product->qte }}</td>
-                                       <td>{{ $product->prix }} fr </td>
-                                       <td>{{$product->qte * $product->prix }} fr</td>
+                                       <td>{{ $product->prix . " " . $commande->user->devise}}  </td>
+                                       <td>{{$product->qte * $product->prix . " " . $commande->user->devise }}</td>
                                    </tr>
                                @endforeach
                                <tr>
                                    <td colspan="3">Sous-Total</td>
-                                   <td>{{ $commande->ssTotal() }} fr</td>
+                                   <td>{{ $commande->ssTotal() . " " . $commande->user->devise}}</td>
                                </tr>
                                <tr>
                                    <td colspan="3">Taux d'imposition</td>
-                                   <td>18%</td>
+                                   <td>{{$commande->user->tva . "%"}}</td>
                                </tr>
                                <tr>
                                    <td colspan="3">TVA</td>
-                                   <td>{{ $commande->tva() }} fr</td>
+                                   <td>{{ $commande->tva() . " " . $commande->user->devise }}</td>
                                </tr>
                                <tr>
                                    <td colspan="3">Net à payer</td>
-                                   <td>{{ $commande->ssTotal() + $commande->tva() }} fr</td>
+                                   <td>{{ $commande->ssTotal() + $commande->tva() . " " . $commande->user->devise }}</td>
                                </tr>
                                <tr>
                                    <td colspan="3">Montant Espèce</td>
-                                   <td>{{ $commande->monnaie }} fr</td>
+                                   <td>{{ $commande->monnaie . " " . $commande->user->devise}}</td>
                                </tr>
                                <tr>
                                    <td colspan="3">Monnaie Rendu</td>
-                                   <td>{{ $commande->monnaie - ($commande->ssTotal() + $commande->tva()) }} fr</td>
+                                   <td>{{ $commande->monnaie - ($commande->ssTotal() + $commande->tva()) . " " . $commande->user->devise }}</td>
                                </tr>
                                </tbody>
                            </table>
@@ -172,8 +173,6 @@
                        </div>
                    </div>
                </div>
-
         </main>
-
 </body>
 </html>

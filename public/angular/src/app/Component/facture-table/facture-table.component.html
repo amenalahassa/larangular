@@ -22,25 +22,25 @@
       <tr *ngFor="let item of liste">
         <th scope="row">{{ item.lib }}</th>
         <td>{{item.qte }}</td>
-        <td>{{ item.prix }} fr </td>
-        <td>{{item.qte * item.prix }} fr</td>
+        <td>{{ item.prix + " " + user?.devise }} </td>
+        <td>{{item.qte * item.prix }} {{ " " + user?.devise }} </td>
         <td><button type="button" class="btn cur-p btn-danger" (click)="triggerDelete(item.id)" >Retirer</button></td>
       </tr>
       <tr>
         <td colspan="4">Sous-Total</td>
-        <td>{{ sousTotal() }} fr</td>
+        <td>{{ sousTotal() }} {{" " + user?.devise }}</td>
       </tr>
       <tr>
         <td colspan="4">Taux d'imposition</td>
-        <td>18%</td>
+        <td>{{ user?.tva }}%</td>
       </tr>
       <tr>
         <td colspan="4">TVA</td>
-        <td>{{ tva() }} fr</td>
+        <td>{{ tva() }} {{" " + user?.devise }}</td>
       </tr>
       <tr>
         <td colspan="4">Net à payer</td>
-        <td>{{ this.sousTotal() + this.tva() }} fr</td>
+        <td>{{ this.sousTotal() + this.tva() }} {{" " + user?.devise }}</td>
       </tr>
       </tbody>
     </table>
