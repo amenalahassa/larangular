@@ -6,7 +6,6 @@ use App\Models\Article;
 use App\Models\Client;
 use App\Models\Commande;
 use App\Models\Product;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

@@ -19,6 +19,7 @@ export class RequeteService {
     getFactures : 'facture/list',
     findFactures : 'facture/find',
     infoUser:"user/info",
+    getUser:"user/about",
   }
 
 
@@ -97,7 +98,11 @@ export class RequeteService {
   }
 
   async getUserInfo() {
-    let result = await this.http.get(this.url.infoUser).toPromise()
-    return result
+    return await this.http.get(this.url.infoUser).toPromise()
   }
+
+  async getUserAbout() {
+    return await this.http.get(this.url.getUser).toPromise()
+  }
+
 }

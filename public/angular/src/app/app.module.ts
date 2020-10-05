@@ -9,6 +9,7 @@ import { FactureTableComponent } from './Component/facture-table/facture-table.c
 import { FactureClientComponent } from './Component/facture-client/facture-client.component';
 import {HttpClientModule} from "@angular/common/http";
 import { FactureListeComponent } from './Component/facture-liste/facture-liste.component';
+import { ProfilComponent } from './Component/profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FactureListeComponent } from './Component/facture-liste/facture-liste.c
     FactureTableComponent,
     FactureClientComponent,
     FactureListeComponent,
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,10 @@ export class AppModule {
     if(main.tagName === "la-facture-liste".toUpperCase()){
       const AppElement = createCustomElement(FactureListeComponent, {injector: this.injector });
       customElements.define('la-facture-liste', AppElement);
+    }
+    else if(main.tagName === "la-profil".toUpperCase()){
+      const AppElement = createCustomElement(ProfilComponent, {injector: this.injector });
+      customElements.define('la-profil', AppElement);
     }
     else {
       const AppElement = createCustomElement(AppComponent, {injector: this.injector });

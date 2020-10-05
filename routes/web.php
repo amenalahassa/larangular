@@ -29,7 +29,8 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('user')->group(function () {
         Route::get('info',[\App\Http\Controllers\UserController::class, 'info']);
-        Route::get('profil',[\App\Http\Controllers\UserController::class, 'profil'])->name('profil');
+        Route::get('profil',[\App\Http\Controllers\ProfilController::class, 'show'])->name('profil');
+        Route::get('about',[\App\Http\Controllers\ProfilController::class, 'info']);
 
     });
 

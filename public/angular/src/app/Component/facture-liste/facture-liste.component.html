@@ -1,20 +1,22 @@
 <div>
-  <div class="bgc-white p-20">
-    <h4 class="c-grey-900 mB-20">Rechercher une facture </h4>
-    <div class="mT-30">
-      <form class="container ">
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <input type="search" id="ref" (keyup)="verify()"  class="form-control" placeholder="FAC/BME/2020-10-03/0004" required>
-          </div>
-          <div class="col-md-6 mb-3 to-align-right">
-            <div class="peer">
-              <button type="submit" id="btn-search" class="btn cur-p btn-primary" (click)="search($event)" disabled >Rechercher</button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
+  <div class="bgc-white p-20" *ngIf="factures !== null">
+   <div *ngIf="factures.length > 2">
+     <h4 class="c-grey-900 mB-20" >Rechercher une facture </h4>
+     <div class="mT-30">
+       <form class="container ">
+         <div class="row">
+           <div class="col-md-6 mb-3">
+             <input type="search" id="ref" (keyup)="verify()"  class="form-control" placeholder="FAC/BME/2020-10-03/0004" required>
+           </div>
+           <div class="col-md-6 mb-3 to-align-right">
+             <div class="peer">
+               <button type="submit" id="btn-search" class="btn cur-p btn-primary" (click)="search($event)" disabled >Rechercher</button>
+             </div>
+           </div>
+         </div>
+       </form>
+     </div>
+   </div>
   </div>
   <div   class="bgc-white p-20 mB-20 table-responsive" *ngIf="searched !== null">
     <div class="row">
@@ -68,7 +70,7 @@
     <h4 class="c-grey-900 mB-20">Listes des factures </h4>
     <div *ngIf="factures !== null">
       <div  *ngIf="factures.length > 0" >
-        <p>Ce tableau contient les {{ factures.length }} dernières factures délivrées. Utiliser le moteur de recherche pour trouver une facture plus ancienne ou pour en verifier une. </p>
+        <p>Ce tableau contient {{ factures.length == 1 ? 'la seule facture delivrée.' : 'les ' + factures.length + ' dernières factures délivrées.' }} <span *ngIf="factures.length > 2" > Utiliser le moteur de recherche pour trouver une facture plus ancienne ou pour en verifier une.</span> </p>
         <table class="table">
           <thead>
           <tr>

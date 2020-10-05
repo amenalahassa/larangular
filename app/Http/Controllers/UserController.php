@@ -44,8 +44,6 @@ class UserController extends Controller
         return response()->json(null, 204);
     }
 
-    public function profil () {
-        return view('pages.about');
-    }
+
 
 }
