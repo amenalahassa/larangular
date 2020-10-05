@@ -29,11 +29,7 @@ export class FactureListeComponent implements OnInit {
 
   }
 
-  delete (id: number) {
-    this.request.deleteFacture(id).subscribe()
-    this.searched = null
-    this.ngOnInit()
-  }
+
 
   search ($event: MouseEvent) {
     $event.preventDefault()

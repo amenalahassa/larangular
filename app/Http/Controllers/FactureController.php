@@ -44,14 +44,6 @@ class FactureController extends Controller
     }
 
 
-    public function delete (Request $request)
-    {
-        $factures = Commande::where('id', $request->data['item']);
-        $factures->delete();
-        return response()->json(null, 204);
-    }
-
-
     public function download ($id)
     {
         $commande = Commande::find($id);

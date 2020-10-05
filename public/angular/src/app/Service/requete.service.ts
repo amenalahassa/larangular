@@ -18,7 +18,6 @@ export class RequeteService {
     sendCmd : 'commande/save',
     getFactures : 'facture/list',
     findFactures : 'facture/find',
-    deleteFacture:"facture/delete",
     infoUser:"user/info",
   }
 
@@ -51,13 +50,6 @@ export class RequeteService {
     return this.http.post<DataModel>(this.url.sendCmd, this.data, this.httpOptions)
   }
 
-
-  deleteFacture(id: number): Observable<DataModel> {
-    this.data.data = {
-      item : id
-    }
-    return this.http.post<DataModel>(this.url.deleteFacture, this.data, this.httpOptions)
-  }
 
   async getFactures() {
     let factures: Array<Facture> = []
