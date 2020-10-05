@@ -11,12 +11,20 @@ class FactureController extends Controller
 {
     public function index ()
     {
+        if (Auth::user()->tel === null || Auth::user()->tva === null)
+        {
+            return redirect()->route('about.user');
+        }
         return view('pages.welcome');
     }
 
 
     public function show ()
     {
+        if (Auth::user()->tel === null || Auth::user()->tva === null)
+        {
+            return redirect()->route('about.user');
+        }
         return view('pages.liste');
     }
 

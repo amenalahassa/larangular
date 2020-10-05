@@ -44,7 +44,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="peer">
+                        <div style="margin-left: 20px" class="peer">
                             <button type="submit" class="btn btn-primary">Connection</button>
                         </div>
                     </div>

@@ -154,10 +154,17 @@
                                    <td colspan="3">Montant Espèce</td>
                                    <td>{{ $commande->monnaie . " " . $commande->user->devise}}</td>
                                </tr>
-                               <tr>
-                                   <td colspan="3">Monnaie Rendu</td>
-                                   <td>{{ $commande->monnaie - ($commande->ssTotal() + $commande->tva()) . " " . $commande->user->devise }}</td>
-                               </tr>
+                               @if($commande->monnaie - ($commande->ssTotal() + $commande->tva()) > 0)
+                                   <tr>
+                                       <td colspan="3">Monnaie Rendu</td>
+                                       <td>{{ $commande->monnaie - ($commande->ssTotal() + $commande->tva()) . " " . $commande->user->devise }}</td>
+                                   </tr>
+                               @else
+                                   <tr>
+                                       <td colspan="3">Monnaie dû par le client</td>
+                                       <td>{{ abs($commande->monnaie - ($commande->ssTotal() + $commande->tva()) ) . " " . $commande->user->devise }}</td>
+                                   </tr>
+                               @endif
                                </tbody>
                            </table>
                        </div>

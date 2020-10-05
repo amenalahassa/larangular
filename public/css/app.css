@@ -1,5 +1,64 @@
+/*Style of profil blade */
+
+.divider-profil
+{
+    border-top: 1px solid rgba(0, 0, 0, 0.8) !important;
+}
+
+.profil-img-div
+{
+    height: 250px;
+    text-align: center;
+
+}
+.profil-img-edit
+{
+    position: absolute;
+    left: 70px;
+    bottom: 40px;
+}
+
+.profil-img-div div
+{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    position: relative;
+}
 
 
+.profil-img-div div img
+{
+    display: inline-block;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.card-value p
+{
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.card-icon
+{
+    width: 30px;
+    position: relative;
+    height: 30px;
+}
+
+.card-icon i
+{
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+}
+
+
+
+
+/* Style of facture pdf*/
 .header, .data-table
 {
     border-bottom: 3px solid red !important;

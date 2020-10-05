@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
     <style>
         #loader {
             transition: all 0.3s ease-in-out;
@@ -68,6 +69,8 @@
               }
         }
     </style>
+
+    @yield('css')
 </head>
 <body class="app">
 <div id='loader'>
@@ -155,7 +158,7 @@
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
                             <div class="peer mR-10">
-                                <img class="w-3r bdrs-50p" src="{{ asset(Auth::user()->img !== "" ? 'storage/'. Auth::user()->img : 'images/larangular.png') }}" alt="">
+                                <img class="w-3r bdrs-50p" style="width: 40px; height: 40px" src="{{ asset(Auth::user()->img !== "" ? 'storage/'. Auth::user()->img : 'images/larangular.png') }}" alt="">
                             </div>
                             <div class="peer">
                                 <span class="fsz-sm c-grey-900">{{ Auth::user()->name }}</span>
@@ -163,7 +166,7 @@
                         </a>
                         <ul class="dropdown-menu fsz-sm">
                             <li>
-                                <a href="#" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                                <a href="{{ route('profil') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                                     <i class="ti-user mR-10"></i>
                                     <span>Profile</span>
                                 </a>

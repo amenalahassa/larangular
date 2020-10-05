@@ -63,4 +63,8 @@ export class FactureListeComponent implements OnInit {
       btn.setAttribute('disabled', "true")
     }
   }
+
+  abs(number: number) {
+    return Math.abs(number)
+  }
 }

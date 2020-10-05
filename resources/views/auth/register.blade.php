@@ -49,7 +49,7 @@
                     <button type="submit"  class="btn btn-primary">S'inscrire</button>
                 </div>
             </form>
-            <div >
+            <div  >
                 Vous avez deja un compte ? <a href="{{ route('login') }}" style="margin-left: 10px"><button class="btn btn-primary">Connectez-vous</button></a>
             </div>
         </div>

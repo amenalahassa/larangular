@@ -38,7 +38,7 @@
           <th scope="col">Sous-Total</th>
           <th scope="col">Total TVA</th>
           <th scope="col">Montant Espece</th>
-          <th scope="col">Monnaie rendu</th>
+          <th scope="col">Monnaie rendu ou dû </th>
           <th scope="col">#</th>
           <th scope="col">#</th>
         </tr>
@@ -51,10 +51,11 @@
           <th scope="row">{{ facture.tel }}</th>
           <th scope="row">{{ facture.adr }}</th>
           <th scope="row">{{ facture.productCount }}</th>
-          <th scope="row">{{ facture.ssTotal }}</th>
-          <th scope="row">{{ facture.tva }}</th>
-          <th scope="row">{{ facture.monnaie }}</th>
-          <th scope="row">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}}</th>
+          <th scope="row">{{ facture.ssTotal }} {{" " + user?.devise }}</th>
+          <th scope="row">{{ facture.tva }} {{" " + user?.devise }}</th>
+          <th scope="row">{{ facture.monnaie }} {{" " + user?.devise }}</th>
+          <th scope="row" *ngIf="(facture.monnaie  - (facture.ssTotal + facture.tva) ) >= 0">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}} {{" " + user?.devise }}</th>
+          <th scope="row" *ngIf="(facture.monnaie  - (facture.ssTotal + facture.tva) ) < 0">{{ abs(facture.monnaie  - (facture.ssTotal + facture.tva) )}} {{" " + user?.devise }} dû </th>
           <th><button type="button" class="btn cur-p btn-danger" (click)="delete(facture.id)" >Supprimer</button></th>
           <th><a href="download/{{facture.id}}" target="_blank"><button type="button" class="btn cur-p btn-primary" >Telécharger</button></a></th>
         </tr>
@@ -82,7 +83,7 @@
             <th scope="col">Sous-Total</th>
             <th scope="col">Total TVA</th>
             <th scope="col">Montant Espece</th>
-            <th scope="col">Monnaie rendu</th>
+            <th scope="col">Monnaie rendu ou dû </th>
             <th scope="col">#</th>
             <th scope="col">#</th>
           </tr>
@@ -98,7 +99,8 @@
             <th scope="row">{{ facture.ssTotal }} {{" " + user?.devise }}</th>
             <th scope="row">{{ facture.tva }} {{" " + user?.devise }}</th>
             <th scope="row">{{ facture.monnaie }} {{" " + user?.devise }}</th>
-            <th scope="row">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}} {{" " + user?.devise }}</th>
+            <th scope="row" *ngIf="(facture.monnaie  - (facture.ssTotal + facture.tva) ) >= 0">{{ facture.monnaie  - (facture.ssTotal + facture.tva )}} {{" " + user?.devise }}</th>
+            <th scope="row" *ngIf="(facture.monnaie  - (facture.ssTotal + facture.tva) ) < 0">{{ abs(facture.monnaie  - (facture.ssTotal + facture.tva) )}} {{" " + user?.devise }} dû </th>
             <th><button type="button" class="btn cur-p btn-danger" (click)="delete(facture.id)" >Supprimer</button></th>
             <th><a href="download/{{facture.id}}" target="_blank"><button type="button" class="btn cur-p btn-primary" >Telécharger</button></a></th>
           </tr>
