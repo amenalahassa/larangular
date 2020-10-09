@@ -27,6 +27,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/list', [\App\Http\Controllers\FactureController::class, 'show'])->name('list');
 
 
+    Route::get('/forward', function () {
+        return view('pages.forward');
+    })->name('forward');
+
+
     Route::prefix('user')->group(function () {
         Route::get('info',[\App\Http\Controllers\UserController::class, 'info']);
         Route::get('profil',[\App\Http\Controllers\ProfilController::class, 'show'])->name('profil');

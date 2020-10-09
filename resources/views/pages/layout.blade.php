@@ -97,7 +97,7 @@
             <div class="sidebar-logo">
                 <div class="peers ai-c fxw-nw">
                     <div class="peer peer-greed">
-                        <a class="sidebar-link td-n" href="index.html">
+                        <a class="sidebar-link td-n" href="{{ route('home') }}">
                             <div class="peers ai-c fxw-nw">
                                 <div class="peer">
                                     <div class="logo">
@@ -136,6 +136,14 @@
                   <i class="c-brown-500 ti-list"></i>
                 </span>
                         <span class="title">Liste des factures</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class='sidebar-link' href="{{ route('forward') }}">
+                <span class="icon-holder">
+                  <i class="c-green-500 ti-cup"></i>
+                </span>
+                        <span class="title">Go further</span>
                     </a>
                 </li>
             </ul>
