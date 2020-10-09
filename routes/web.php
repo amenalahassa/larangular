@@ -71,6 +71,6 @@ Route::fallback(function($exception) {
         return view('pages.welcome');
     }
     else {
-        return view('auth.login');
+        return view('pages.404');
     }
 });
