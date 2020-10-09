@@ -32,6 +32,13 @@ Route::middleware('auth')->group(function () {
         Route::get('profil',[\App\Http\Controllers\ProfilController::class, 'show'])->name('profil');
         Route::get('about',[\App\Http\Controllers\ProfilController::class, 'info']);
 
+        Route::prefix('update')->group(function () {
+            Route::post('image',[\App\Http\Controllers\ProfilController::class, 'updateImg']);
+            Route::post('name',[\App\Http\Controllers\ProfilController::class, 'updateName']);
+            Route::post('adresse',[\App\Http\Controllers\ProfilController::class, 'updateAdresse']);
+            Route::post('email',[\App\Http\Controllers\ProfilController::class, 'updateEmail']);
+            Route::post('tel',[\App\Http\Controllers\ProfilController::class, 'updateTel']);
+        });
     });
 
     Route::post('article/find',[\App\Http\Controllers\CommandeController::class, 'findArticle']);

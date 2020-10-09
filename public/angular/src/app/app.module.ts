@@ -10,6 +10,9 @@ import { FactureClientComponent } from './Component/facture-client/facture-clien
 import {HttpClientModule} from "@angular/common/http";
 import { FactureListeComponent } from './Component/facture-liste/facture-liste.component';
 import { ProfilComponent } from './Component/profil/profil.component';
+import { CardEditableComponent } from './Component/card-editable/card-editable.component';
+import { CardSimpleComponent } from './Component/card-simple/card-simple.component';
+import { UpdateModalComponent } from './Component/update-modal/update-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { ProfilComponent } from './Component/profil/profil.component';
     FactureClientComponent,
     FactureListeComponent,
     ProfilComponent,
+    CardEditableComponent,
+    CardSimpleComponent,
+    UpdateModalComponent,
   ],
   imports: [
     BrowserModule,

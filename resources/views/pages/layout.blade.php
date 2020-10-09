@@ -175,7 +175,7 @@
                             <li>
                                 <a href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
-          document.getElementById('logout-form').submit();"
+          document.getElementById('logout-form').submit(); localStorage.clear()"
                                    class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                                     <i class="ti-power-off mR-10"></i>
                                     <span>Logout</span>

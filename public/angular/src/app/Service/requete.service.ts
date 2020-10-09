@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import {DataModel} from "../Interface/data-model";
@@ -20,6 +20,11 @@ export class RequeteService {
     findFactures : 'facture/find',
     infoUser:"user/info",
     getUser:"user/about",
+    updateImg:'user/update/image',
+    updateName:'user/update/name',
+    updateAdr:'user/update/adresse',
+    updateEmail:'user/update/email',
+    updateTel:'user/update/tel',
   }
 
 
@@ -103,6 +108,30 @@ export class RequeteService {
 
   async getUserAbout() {
     return await this.http.get(this.url.getUser).toPromise()
+  }
+
+  updateImg (img:FormData) {
+    return this.http.post(this.url.updateImg, img).toPromise()
+  }
+
+  updateName (value:string) {
+    this.data.data = value
+    return this.http.post(this.url.updateName, this.data).toPromise()
+  }
+
+  updateAdresse (value:string) {
+    this.data.data = value
+    return this.http.post(this.url.updateAdr, this.data).toPromise()
+  }
+
+  updateEmail (value:string) {
+    this.data.data = value
+    return this.http.post(this.url.updateEmail, this.data).toPromise()
+  }
+
+  updateTel (value:string) {
+    this.data.data = value
+    return this.http.post(this.url.updateTel, this.data).toPromise()
   }
 
 }

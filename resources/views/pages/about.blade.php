@@ -3,6 +3,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/component.css')}}">
 @endsection
 
 @section('main')
@@ -23,7 +24,7 @@
     <script src="{{ asset('angular/dist/styles.js') }}" defer></script>
     <script src="{{ asset('angular/dist/vendor.js') }}" defer></script>
     <script src="{{ asset('angular/dist/main.js') }}" defer></script>
-
+    <script src="{{ asset('js/custom-file-input.js') }}"></script>
 @endsection
 
 

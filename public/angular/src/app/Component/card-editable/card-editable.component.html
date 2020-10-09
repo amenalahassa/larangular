@@ -1,0 +1,17 @@
+<div class="layers bd bgc-white p-20">
+  <div class="layer w-100 mB-10">
+    <h6 class="lh-1">{{ title }}</h6>
+  </div>
+  <div class="layer w-100">
+    <div class="peers ai-sb fxw-nw">
+      <div class="peer card-value peer-greed">
+        <p>{{ value }}</p>
+      </div>
+      <div (click)="triggerEdit(id)"  class="peer">
+        <a class="btn btn-danger card-icon bdrs-50p p-15 lh-0">
+          <i class="fa fa-edit"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+
+<div class="peer " style="display: none" >
+  <button id = "triggerModal" type="button" class="btn cur-p btn-success" data-toggle="modal" data-target="#modalforupdate"></button>
+</div>
+
+<div class="modal fade" id="modalforupdate" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+      <div class="modal-content" *ngIf="modal?.id == 1">
+        <div class="modal-header">
+          <h5 class="modal-title" >{{modal.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="{{ 'modal-form-' + modal?.ref}}">
+          <div class="modal-body">
+              <input type="file"  style="display: none"  accept="image/*" required  name="photo" id="file-2" class="inputfile inputfile-2 {{ 'modal-input-' + modal?.ref}}" data-multiple-caption="{count} files selected" />
+              <label style="display: block" for="file-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choisir une image&hellip;</span></label>
+              <span *ngIf="error !== null" style="margin: 10px 10px; display: block" class="alert alert-warning" role="alert">
+                  <strong>{{ error }}</strong>
+              </span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary {{ 'modal-close-' + modal?.ref}}" (click)="reset()" data-dismiss="modal">Annuler</button>
+            <button type="submit"  class="btn btn-primary" (click)="sendImg($event)">Envoyer</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content" *ngIf="modal?.id == 2">
+        <div class="modal-header">
+          <h5 class="modal-title" >{{modal.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="{{ 'modal-form-' + modal?.ref}}">
+          <div class="modal-body">
+              <label for="nom" >Le nouveau nom de votre entreprise</label>
+              <input type="text" id="nom"  class="form-control {{ 'modal-input-' + modal?.ref}}" Placeholder='Supermarché Dina' required>
+              <span *ngIf="error !== null" style="margin: 10px 10px; display: block" class="alert alert-warning" role="alert">
+                  <strong>{{ error }}</strong>
+              </span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary {{ 'modal-close-' + modal?.ref}}" (click)="reset()" data-dismiss="modal">Annuler</button>
+            <button type="submit"  class="btn btn-primary" (click)="sendName($event)">Envoyer</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content" *ngIf="modal?.id == 3">
+        <div class="modal-header">
+          <h5 class="modal-title" >{{modal.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="{{ 'modal-form-' + modal?.ref}}">
+          <div class="modal-body">
+              <label for="adr">Votre nouvelle adresse</label>
+              <input id="adr" type="text"  class="form-control {{ 'modal-input-' + modal?.ref}}" required>
+              <span *ngIf="error !== null" style="margin: 10px 10px; display: block" class="alert alert-warning" role="alert">
+                  <strong>{{ error }}</strong>
+              </span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary {{ 'modal-close-' + modal?.ref}}" (click)="reset()" data-dismiss="modal">Annuler</button>
+            <button type="submit"  class="btn btn-primary" (click)="sendAdr($event)">Envoyer</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content" *ngIf="modal?.id == 4">
+        <div class="modal-header">
+          <h5 class="modal-title" >{{modal.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="{{ 'modal-form-' + modal?.ref}}">
+          <div class="modal-body">
+              <label for="mail" >Votre nouvel adresse email</label>
+              <input  id="mail" type="email"  class="form-control {{ 'modal-input-' + modal?.ref}}" required>
+              <span *ngIf="error !== null" style="margin: 10px 10px; display: block" class="alert alert-warning" role="alert">
+                  <strong>{{ error }}</strong>
+              </span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary {{ 'modal-close-' + modal?.ref}}" (click)="reset()" data-dismiss="modal">Annuler</button>
+            <button type="submit"  class="btn btn-primary" (click)="sendEmail($event)">Envoyer</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-content" *ngIf="modal?.id == 5">
+        <div class="modal-header">
+          <h5 class="modal-title" >{{modal.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="{{ 'modal-form-' + modal?.ref}}">
+          <div class="modal-body">
+              <label for="tel" >Votre nouveau numero de telephone</label>
+              <input id="tel" type="tel" pattern="^[0-9-+\s]*$"  placeholder="+229 66 66 66 66" class=" form-control {{ 'modal-input-' + modal?.ref}}" required>
+              <span *ngIf="error !== null" style="margin: 10px 10px; display: block" class="alert alert-warning" role="alert">
+                  <strong>{{ error }}</strong>
+              </span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary {{ 'modal-close-' + modal?.ref}}" (click)="reset()" data-dismiss="modal">Annuler</button>
+            <button type="submit"  class="btn btn-primary" (click)="sendTel($event)">Envoyer</button>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+

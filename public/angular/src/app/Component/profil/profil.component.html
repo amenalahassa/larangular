@@ -2,206 +2,57 @@
   <div class="profil-img-div">
     <div>
       <img class=""  src="{{ profil?.user.img !== '' ? 'storage/' + profil?.user.img : 'images/larangular.png' }}" alt="">
-      <div class="peer profil-img-edit ">
-        <a href="" class="btn btn-danger card-icon bdrs-50p p-15 lh-0">
-          <i class="fa fa-edit"></i>
+      <div (click)="update(1)" class="peer profil-img-edit ">
+        <a  class="btn btn-danger card-icon bdrs-50p p-15 lh-0">
+          <i   class="fa fa-edit"></i>
         </a>
       </div>
     </div>
   </div>
   <div class="row gap-20">
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Nom de l'entreprise</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.user.name }}</p>
-            </div>
-            <div class="peer">
-              <a href="" class="btn btn-danger card-icon bdrs-50p p-15 lh-0">
-                <i class="fa fa-edit"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-editable [title]="'Nom de l\'entreprise'" [value]=" profil?.user.name" [id]="2" (edit)="update($event)" ></la-card-editable>
     </div>
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Adresse</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.user.adr }}</p>
-            </div>
-            <div class="peer">
-              <a href="" class="btn btn-danger card-icon bdrs-50p p-15 lh-0">
-                <i class="fa fa-edit"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-editable [title]="'Adresse'" [value]="profil?.user.adr" [id]="3" (edit)="update($event)"></la-card-editable>
     </div>
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Email</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.user.email }}</p>
-            </div>
-            <div class="peer">
-              <a href="" class="btn btn-danger card-icon bdrs-50p p-15 lh-0">
-                <i class="fa fa-edit"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-editable [title]="'Email'" [value]="profil?.user.email" [id]="4" (edit)="update($event)"></la-card-editable>
     </div>
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Tel</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.user.tel }}</p>
-            </div>
-            <div class="peer">
-              <a href="" class="btn btn-danger card-icon bdrs-50p p-15 lh-0">
-                <i class="fa fa-edit"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-editable [title]="'Tel'" [value]="profil?.user.tel" [id]="5" (edit)="update($event)"></la-card-editable>
     </div>
   </div>
   <hr class="divider-profil">
   <div class="row gap-20">
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Devise</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.user.devise }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-simple [value]="profil?.user.devise" [title]="'Devise'"></la-card-simple>
     </div>
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Tva</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.user.tva + "%" }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-simple [value]=" profil?.user.tva + '%'" [title]="'Tva'"></la-card-simple>
     </div>
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Identifiant des factures</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.user.ref }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-simple [value]="profil?.user.ref" [title]="'Identifiant des factures'"></la-card-simple>
     </div>
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Nombre de factures delivrées</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.countFacture }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-simple [value]=" profil?.countFacture" [title]="'Nombre de factures delivrées'"></la-card-simple>
     </div>
   </div>
   <div class="row gap-20">
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Nombre d'articles vendus</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.countArticle}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-simple [title]="'Nombre d\'articles vendus'" [value]="profil?.countArticle"></la-card-simple>
     </div>
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Chiffre d'affaire TTC</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.ca + " " + profil?.user.devise}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-simple [title]="'Chiffre d\'affaire TTC' " [value]="profil?.ca + ' ' + profil?.user.devise"></la-card-simple>
     </div>
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">TVA collectées</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ (profil?.totalTva ) + " " + profil?.user.devise }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-simple [title]="'TVA collectées'" [value]="(profil?.totalTva ) + ' '  + profil?.user.devise"></la-card-simple>
     </div>
     <div class='col-md-3'>
-      <div class="layers bd bgc-white p-20">
-        <div class="layer w-100 mB-10">
-          <h6 class="lh-1">Total dû par les clients</h6>
-        </div>
-        <div class="layer w-100">
-          <div class="peers ai-sb fxw-nw">
-            <div class="peer card-value peer-greed">
-              <p>{{ profil?.totalDu + " " + profil?.user.devise }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <la-card-simple [color] =true [title]= "'Total dû par les clients'" [value]=" profil?.totalDu + ' ' + profil?.user.devise"></la-card-simple>
     </div>
+  </div>
+  <div>
+    <la-update-modal [modal]="modal" (reload) = "ngOnInit()" ></la-update-modal>
   </div>
 </div>
