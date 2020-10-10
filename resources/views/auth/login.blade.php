@@ -1,4 +1,5 @@
-@extends('auth.layout')
+@extends('layouts.auth')
+
 
 @section('main')
 
