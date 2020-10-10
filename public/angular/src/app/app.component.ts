@@ -21,7 +21,9 @@ export class AppComponent {
 
   }
 
-  ngOnInit () {
+  ngOnInit ()
+  {
+
     if (typeof(Storage) !== "undefined") {
       let articles = JSON.parse(window.localStorage.getItem('articles'))
       if (articles !== null)
@@ -29,12 +31,15 @@ export class AppComponent {
         this.articleListe = articles
       }
     }
+
     this.request.getUserInfo().then((result: DataModel) => {
       this.user = result.data
     })
   }
 
-  addAticles () {
+  addAticles ()
+  {
+
     let lib = b.gIE('#libelle')
     let qte = b.gIE('#qte')
     let prix = b.gIE('#prix')
@@ -61,7 +66,8 @@ export class AppComponent {
     window.localStorage.setItem('articles', JSON.stringify(this.articleListe))
   }
 
-  sendCmd($event: Client) {
+  sendCmd($event: Client)
+  {
     let cmd = {
       client : $event,
       products : this.articleListe
