@@ -1,0 +1,130 @@
+/*Style of profil blade */
+
+.divider-profil
+{
+    border-top: 1px solid rgba(0, 0, 0, 0.8) !important;
+}
+
+.profil-img-div
+{
+    height: 250px;
+    text-align: center;
+
+}
+.profil-img-edit
+{
+    position: absolute;
+    left: 70px;
+    bottom: 40px;
+}
+
+.profil-img-div div
+{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    position: relative;
+}
+
+
+.profil-img-div div img
+{
+    display: inline-block;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.card-value p
+{
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.card-icon
+{
+    width: 30px;
+    position: relative;
+    height: 30px;
+}
+
+.card-icon i
+{
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+}
+
+
+
+
+/* Style of facture pdf*/
+.header, .data-table
+{
+    border-bottom: 3px solid red !important;
+}
+
+.data-table
+{
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+.about-ent
+{
+    min-height: 150px;
+}
+.about-fac
+{
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+table.about-ent-table, .header, table.about-fac-table
+{
+    width: 100%;
+}
+
+table.about-ent-table tr .about-ent-name
+{
+    color: #d73a49;
+}
+
+table.about-fac-table tr .about-fac-clt
+{
+   width: 50%;
+    text-align: left;
+}
+table.about-fac-table tr .about-fac-this
+{
+    width: 50%;
+    text-align: right;
+}
+
+table.about-ent-table tr td
+{
+    width: 100%;
+    text-align: center;
+}
+
+table.about-ent-table tr .about-ent-logo
+{
+    margin-bottom: 10px;
+}
+
+
+.about-ent img
+{
+    max-width: 80px;
+    min-height: 80px;
+}
+
+.footer {
+    margin-top: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .merci
+{
+    margin-top: 10px;
+}
