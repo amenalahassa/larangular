@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\CommandeController;
+use App\Http\Controllers\FactureController;
+use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,16 +19,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/about', [\App\Http\Controllers\UserController::class, 'show'])->name('about.user');
-    Route::post('/about', [\App\Http\Controllers\UserController::class, 'save']);
+    Route::get('/about', [UserController::class, 'show'])->name('about.user');
+    Route::post('/about', [UserController::class, 'save']);
 
 
-    Route::get('/home', [\App\Http\Controllers\FactureController::class, 'index'])->name('home');
-    Route::get('/list', [\App\Http\Controllers\FactureController::class, 'show'])->name('list');
+    Route::get('/home', [FactureController::class, 'index'])->name('home');
+    Route::get('/list', [FactureController::class, 'show'])->name('list');
 
 
     Route::get('/forward', function () {
@@ -33,27 +36,27 @@ Route::middleware('auth')->group(function () {
 
 
     Route::prefix('user')->group(function () {
-        Route::get('info',[\App\Http\Controllers\UserController::class, 'info']);
-        Route::get('profil',[\App\Http\Controllers\ProfilController::class, 'show'])->name('profil');
-        Route::get('about',[\App\Http\Controllers\ProfilController::class, 'info']);
+        Route::get('info',[UserController::class, 'info']);
+        Route::get('profil',[ProfilController::class, 'show'])->name('profil');
+        Route::get('about',[ProfilController::class, 'info']);
 
         Route::prefix('update')->group(function () {
-            Route::post('image',[\App\Http\Controllers\ProfilController::class, 'updateImg']);
-            Route::post('name',[\App\Http\Controllers\ProfilController::class, 'updateName']);
-            Route::post('adresse',[\App\Http\Controllers\ProfilController::class, 'updateAdresse']);
-            Route::post('email',[\App\Http\Controllers\ProfilController::class, 'updateEmail']);
-            Route::post('tel',[\App\Http\Controllers\ProfilController::class, 'updateTel']);
+            Route::post('image',[ProfilController::class, 'updateImg']);
+            Route::post('name',[ProfilController::class, 'updateName']);
+            Route::post('adresse',[ProfilController::class, 'updateAdresse']);
+            Route::post('email',[ProfilController::class, 'updateEmail']);
+            Route::post('tel',[ProfilController::class, 'updateTel']);
         });
     });
 
-    Route::post('article/find',[\App\Http\Controllers\CommandeController::class, 'findArticle']);
-    Route::post('commande/save',[\App\Http\Controllers\CommandeController::class, 'saveCmd']);
-    Route::post('client/find',[\App\Http\Controllers\CommandeController::class, 'findClient']);
+    Route::post('article/find',[CommandeController::class, 'findArticle']);
+    Route::post('commande/save',[CommandeController::class, 'saveCmd']);
+    Route::post('client/find',[CommandeController::class, 'findClient']);
 
-    Route::get('facture/list',[\App\Http\Controllers\FactureController::class, 'list']);
-    Route::post('facture/find',[\App\Http\Controllers\FactureController::class, 'find']);
+    Route::get('facture/list',[FactureController::class, 'list']);
+    Route::post('facture/find',[FactureController::class, 'find']);
 
-    Route::get('download/{id}',[\App\Http\Controllers\FactureController::class, 'download']);
+    Route::get('download/{id}',[FactureController::class, 'download']);
 });
 
 
