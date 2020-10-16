@@ -1,60 +1,43 @@
-@extends('layouts.auth')
+<x-guest-layout>
+    <x-jet-authentication-card>
+        <x-slot name="logo">
+            <x-jet-authentication-card-logo />
+        </x-slot>
 
-@section('main')
+        <x-jet-validation-errors class="mb-4" />
 
-    <div class="peers ai-s fxw-nw h-100vh">
-        <div class="peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv" style='background-image: url("images/bg.jpg")'>
-            <div class="pos-a centerXY">
-                <div class="bgc-white bdrs-50p pos-r" style='width: 120px; height: 120px;'>
-                    <img class="pos-a centerXY" src="{{ asset('images/logo.png') }}" alt="">
-                </div>
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
+
+            <div>
+                <x-jet-label for="name" value="{{ __('Name') }}" />
+                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
-        </div>
-        <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
-            <h4 class="fw-300 c-grey-900 mB-40">S'inscrire</h4>
-            <form method="POST" action="{{ route('register') }}">
-                @csrf
-                <div class="form-group">
-                    <label class="text-normal text-dark">Nom de votre entreprise</label>
-                    <input type="text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus class="form-control" Placeholder='Supermarché Dina'>
-                    @error('name')
-                    <span style="display: block; margin: 10px 10px;" class="alert alert-warning" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-                <div class="form-group">
-                    <label class="text-normal text-dark">Email </label>
-                    <input type="email" class="form-control" Placeholder='name@email.com' name="email" value="{{ old('email') }}" required autocomplete="email">
-                    @error('email')
-                    <span style="display: block; margin: 10px 10px;" class="alert alert-warning" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-                <div class="form-group">
-                    <label class="text-normal text-dark">Mot de passe</label>
-                    <input type="password" class="form-control" placeholder="Password" name="password" required autocomplete="new-password">
-                    @error('password')
-                    <span style="display: block; margin: 10px 10px;" class="alert alert-warning" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-                <div class="form-group">
-                    <label class="text-normal text-dark">Confirmer le mot de passe</label>
-                    <input type="password" name="password_confirmation" required autocomplete="new-password" class="form-control" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <button type="submit"  class="btn btn-primary">S'inscrire</button>
-                </div>
-            </form>
-            <div  >
-                Vous avez deja un compte ? <a href="{{ route('login') }}" style="margin-left: 10px"><button class="btn btn-primary">Connectez-vous</button></a>
+
+            <div class="mt-4">
+                <x-jet-label for="email" value="{{ __('Email') }}" />
+                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
-        </div>
-    </div>
 
+            <div class="mt-4">
+                <x-jet-label for="password" value="{{ __('Password') }}" />
+                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+            </div>
 
-@endsection
+            <div class="mt-4">
+                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+            </div>
 
+            <div class="flex items-center justify-end mt-4">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                    {{ __('Already registered?') }}
+                </a>
+
+                <x-jet-button class="ml-4">
+                    {{ __('Register') }}
+                </x-jet-button>
+            </div>
+        </form>
+    </x-jet-authentication-card>
+</x-guest-layout>

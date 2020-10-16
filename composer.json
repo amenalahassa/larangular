@@ -16,7 +16,10 @@
         "h4cc/wkhtmltoimage-amd64": "0.12.x",
         "h4cc/wkhtmltopdf-amd64": "0.12.x",
         "laravel/framework": "^8.0",
+        "laravel/jetstream": "^1.4",
+        "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.0",
+        "livewire/livewire": "^2.0",
         "simplesoftwareio/simple-qrcode": "^3.0"
     },
     "require-dev": {
