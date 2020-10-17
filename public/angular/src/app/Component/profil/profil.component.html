@@ -1,7 +1,7 @@
 <div class="masonry-item bd p-20">
   <div class="profil-img-div">
     <div>
-      <img class=""  src="{{ profil?.user.img !== '' ? 'storage/' + profil?.user.img : 'images/larangular.png' }}" alt="">
+      <img class=""  src="{{ profil?.user.profile_photo_path !== null ? 'storage/public/' + profil?.user.profile_photo_path : 'images/larangular.png' }}" alt="">
       <div (click)="update(1)" class="peer profil-img-edit ">
         <a  class="btn btn-danger card-icon bdrs-50p p-15 lh-0">
           <i   class="fa fa-edit"></i>

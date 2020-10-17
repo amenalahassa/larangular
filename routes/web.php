@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::get('/about', [UserController::class, 'show'])->name('about.user');
     Route::post('/about', [UserController::class, 'save']);
@@ -60,7 +60,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::middleware('guest')->group(function () {
+Route::middleware(['guest'])->group(function () {
     Route::get('/', function () {
         return view('auth.login');
     });
@@ -78,6 +78,3 @@ Route::fallback(function($exception) {
     }
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');

@@ -19,7 +19,7 @@ class ProfilController extends Controller
 
     public function info ()
     {
-        $info['user'] = User::find(Auth::id())->only('img', 'name', 'adr', 'email', 'tel', 'devise', 'tva', 'ref');
+        $info['user'] = Auth::user()->withoutRelations();
         $info['countFacture'] = Auth::user()->facture->count();
         $info['countArticle'] = Auth::user()->totalArticles();
         $info['ca'] = Auth::user()->totalFactureCA();
@@ -33,9 +33,8 @@ class ProfilController extends Controller
         $validatedData = $request->validate([
             'photo' => ['required','file','mimes:png,jpg,jpeg'],
         ]);
-        $path = $request->file('photo')->storeAs('public', "profil-" . time().'.'.$request->file('photo')->getClientOriginalExtension() );
-        unlink(storage_path("app/". Auth::user()->img));
-        Auth::user()->img = $path;
+        Auth::user()->deleteProfilePhoto();
+        Auth::user()->updateProfilePhoto($request->file('photo'));
         Auth::user()->save();
         return response()->json(null, 204);
     }

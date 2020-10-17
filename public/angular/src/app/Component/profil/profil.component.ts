@@ -26,6 +26,7 @@ export class ProfilComponent implements OnInit {
     this.request.getUserAbout().then((result:DataModel) => {
       // @ts-ignore
       this.profil =  result.data
+      b.s(result.data)
       this.btn = <HTMLElement>document.querySelector('#triggerModal')
     })
 

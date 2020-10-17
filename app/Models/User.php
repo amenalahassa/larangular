@@ -27,6 +27,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'tel', 'adr', 'tva', 'devise', 'ref',
     ];
 
     /**
@@ -58,4 +59,57 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+    public function facture ()
+    {
+        return $this->hasMany('App\Models\Commande');
+    }
+
+
+    public function totalArticles ()
+    {
+        $total = 0;
+        foreach ($this->facture as $facture)
+        {
+            $total += $facture->products->count();
+        }
+        return $total;
+    }
+
+    public function totalFactureCA ()
+    {
+        $total = 0;
+        foreach ($this->facture as $facture)
+        {
+            $total += ($facture->ssTotal() + $facture->tva()) ;
+        }
+        return $total;
+    }
+
+
+    public function totalFactureCAHT ()
+    {
+        $total = 0;
+        foreach ($this->facture as $facture)
+        {
+            $total += ($facture->ssTotal()) ;
+        }
+        return $total;
+    }
+
+    public function totalDu ()
+    {
+        $total = 0;
+        foreach ($this->facture as $facture)
+        {
+            $reliquat = $facture->monnaie - ($facture->ssTotal() + $facture->tva());
+            if ( $reliquat < 0 )
+            {
+                $total += abs($reliquat);
+            }
+        }
+        return $total;
+    }
+
 }

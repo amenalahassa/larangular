@@ -19,19 +19,12 @@ class UserController extends Controller
 
     public function save (UserRequest $request)
     {
-        if(isset($request->photo)){
-            $path = $request->file('photo')->storeAs('public', "profil-" . time().'.'.$request->file('photo')->getClientOriginalExtension() );
-        }
-        else {
-            $path = "";
-        }
         $user = Auth::user();
-        $user->img = $path;
+        $user->updateProfilePhoto($request->photo);
         $user->ref = strtoupper($request->ref);
         $user->fill($request->only(['tel', 'adr', 'tva', 'devise']));
         $user->save();
         return redirect()->route('home');
-
     }
 
     public function info () {
