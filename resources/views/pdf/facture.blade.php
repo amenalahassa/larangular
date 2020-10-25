@@ -84,7 +84,7 @@
                                <tbody>
                                <tr>
                                    <td  >
-                                       <img class="about-ent-logo" alt="" src="datresourcesa:image/jpg;base64,{{ base64_encode(@file_get_contents(asset( $commande->profile_photo_path !== null ? 'storage/public/'. $commande->profile_photo_path : 'images/larangular.png'))) }}"/>
+                                       <img class="about-ent-logo" alt="" src="data:image/jpg;base64,{{ base64_encode(@file_get_contents(asset( $commande->profile_photo_path !== null ? 'storage/public/'. $commande->profile_photo_path : 'images/larangular.png'))) }}"/>
                                        <h4 class="about-ent-name" >{{ $commande->user->name}}</h4>
                                        <h6 > IFU {{ $commande->user->ifu}}</h6>
                                    </td>
