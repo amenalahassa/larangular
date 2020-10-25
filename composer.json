@@ -1,7 +1,7 @@
 {
     "name": "laravel/laravel",
     "type": "project",
-    "description": "Larangular App.",
+    "description": "Larangular App",
     "keywords": [
         "framework",
         "laravel"
