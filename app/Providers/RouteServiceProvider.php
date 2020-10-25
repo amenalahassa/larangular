@@ -37,7 +37,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        resolve(UrlGenerator::class)->forceScheme('https');
+//        resolve(UrlGenerator::class)->forceScheme('https');
 
         $this->configureRateLimiting();
 

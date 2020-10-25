@@ -10,21 +10,18 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script  >
-        {{ file_get_contents('js/app.js') }}
-    </script>
+    <script  src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <style>
-        {{ file_get_contents('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css?integrity=sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&crossorigin=anonymous') }}
-    </style>
-    <style>
-        {{ file_get_contents('https://fonts.googleapis.com/css?family=Nunito') }}
-    </style>
-    <style>
-        {{ file_get_contents('css/app.css') }}
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet"  href="{{ asset('css/app.css') }}">
+
     <style>
         #loader {
             transition: all 0.3s ease-in-out;
