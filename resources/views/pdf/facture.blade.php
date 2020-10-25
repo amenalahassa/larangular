@@ -24,6 +24,9 @@
 
 {{--    <link rel="stylesheet"  href="{{ asset('css/app.css') }}">--}}
     <style>
+        {{ file_get_contents('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css') }}
+    </style>
+    <style>
         {{ file_get_contents('https://fonts.googleapis.com/css?family=Nunito') }}
     </style>
     <style>
