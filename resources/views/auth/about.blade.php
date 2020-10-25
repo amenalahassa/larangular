@@ -13,8 +13,18 @@
                 <div class="mT-30">
                     <form method="POST" action="{{ route('about.user') }}"  enctype=multipart/form-data >
                     @csrf
+                        <h6 style="color: red; margin-bottom: 10px">Attention !!! Le numero IFU, la TVA, la Devise et l'Identifiant des factures sont obligatoires et non modifiables. </h6>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
+                                <label for="inputIFU">IFU</label>
+                                <input type="number" pattern="[0-9]" name="ifu" class="form-control" id="inputIFU"  placeholder="3200700015618" required>
+                                @error('ifu')
+                                    <span style="display: block; margin: 10px 10px;" class="alert alert-warning" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group col-md-4">
                                 <label for="inputTel">Tel</label>
                                 <input type="tel" pattern="^[0-9-+\s]*$" name="tel" class="form-control" id="inputTel" placeholder="+229 66666666" required>
                                 @error('tel')
@@ -23,7 +33,7 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
                                 <label for="inputAdr">Adresse</label>
                                 <input type="text" name="adr" class="form-control" id="inputAdr" placeholder="Gbegamey Rue 2099" required>
                                 @error('adr')

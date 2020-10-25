@@ -18,7 +18,7 @@
         </p>
         <p>
             Par ailleurs, je pense que l'on peut faire mieux, comme le fait Invoicer, une application qui fait la meme chose mais beaucoup mieux !
-            Mais sans faire du copier-coller, j'ai ma petite idee de Larangular, plus ADULTE...
+            Mais sans faire du copier-coller, j'ai ma petite idee de Larangular, plus "ADULTE"...
         </p>
         <p>
             <ul>
@@ -32,6 +32,9 @@
                 <li>Et pourquoi pas une appli client qui lui permet d'avoir un seul endroit tout ces produits, livrables et dont les informations sont mises a jour regulierement.
                 Il pourrait savoir qui detient tel produit sans meme bouger et ainsi avoir une historiques d'achat de tout ces produits en un seul endroits.</li>
             </ul>
+        </p>
+        <p>
+            Vous pensez que ce sont de bonnes idées ? Vous voulez qu'on en discute autour d'un café ? <a target="_blank" href="https://bit.ly/31HHNy2">Oui !!!</a>
         </p>
         <p>
             I hope just one thing, that you enjoy it ! Really.

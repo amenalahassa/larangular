@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('tel')->nullable();
             $table->string('adr')->nullable();
+            $table->bigInteger('ifu')->nullable();
             $table->string('tva')->nullable();
             $table->string('devise')->nullable();
             $table->string('ref')->unique()->nullable();

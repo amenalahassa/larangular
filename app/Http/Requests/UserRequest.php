@@ -29,6 +29,7 @@ class UserRequest extends FormRequest
             'ref' => ['required', 'string', 'max:3', 'unique:users,ref'],
             'adr' => ['required', 'string', 'max:255'],
             'tva' => ['required', 'integer'],
+            'ifu' => ['required', 'integer'],
             'photo'=> ['required','file','mimes:png,jpg,jpeg'],
         ];
     }

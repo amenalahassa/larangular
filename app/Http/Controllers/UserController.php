@@ -22,7 +22,7 @@ class UserController extends Controller
         $user = Auth::user();
         $user->updateProfilePhoto($request->photo);
         $user->ref = strtoupper($request->ref);
-        $user->fill($request->only(['tel', 'adr', 'tva', 'devise']));
+        $user->fill($request->only(['tel', 'adr', 'tva', 'devise', 'ifu']));
         $user->save();
         return redirect()->route('home');
     }

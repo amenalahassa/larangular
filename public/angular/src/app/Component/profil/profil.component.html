@@ -26,6 +26,9 @@
   <hr class="divider-profil">
   <div class="row gap-20">
     <div class='col-md-3'>
+      <la-card-simple [title]="'IFU'" [value]="profil?.user.ifu"></la-card-simple>
+    </div>
+    <div class='col-md-3'>
       <la-card-simple [value]="profil?.user.devise" [title]="'Devise'"></la-card-simple>
     </div>
     <div class='col-md-3'>
@@ -34,11 +37,11 @@
     <div class='col-md-3'>
       <la-card-simple [value]="profil?.user.ref" [title]="'Identifiant des factures'"></la-card-simple>
     </div>
+  </div>
+  <div class="row gap-20">
     <div class='col-md-3'>
       <la-card-simple [value]=" profil?.countFacture" [title]="'Nombre de factures delivrées'"></la-card-simple>
     </div>
-  </div>
-  <div class="row gap-20">
     <div class='col-md-3'>
       <la-card-simple [title]="'Nombre d\'articles vendus'" [value]="profil?.countArticle"></la-card-simple>
     </div>
@@ -48,6 +51,8 @@
     <div class='col-md-3'>
       <la-card-simple [title]="'TVA collectées'" [value]="(profil?.totalTva ) + ' '  + profil?.user.devise"></la-card-simple>
     </div>
+  </div>
+  <div class="row gap-20">
     <div class='col-md-3'>
       <la-card-simple [color] =true [title]= "'Total dû par les clients'" [value]=" profil?.totalDu + ' ' + profil?.user.devise"></la-card-simple>
     </div>

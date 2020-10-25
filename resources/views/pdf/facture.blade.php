@@ -82,8 +82,9 @@
                                <tbody>
                                <tr>
                                    <td  >
-                                       <img class="about-ent-logo" alt="" class="" src="data:image/jpg;base64,{{ base64_encode(@file_get_contents(asset( $commande->user->img !== "" ? 'storage/'. $commande->user->img : 'images/larangular.png'))) }}"/>
+                                       <img class="about-ent-logo" alt="" src="data:image/jpg;base64,{{ base64_encode(@file_get_contents(asset( $commande->profile_photo_path !== null ? 'storage/public/'. $commande->profile_photo_path : 'images/larangular.png'))) }}"/>
                                        <h4 class="about-ent-name" >{{ $commande->user->name}}</h4>
+                                       <h6 > IFU {{ $commande->user->ifu}}</h6>
                                    </td>
                                </tr>
                                </tbody>
@@ -174,7 +175,7 @@
                    <div class="col-md-12">
                        <div class="bgc-white p-20 mB-20">
                            <div>
-                               {!!QrCode::size(50)->backgroundColor(255,255,204)->generate($commande->ref); !!}
+                               {!!QrCode::size(50)->backgroundColor(255,255,204)->style('round')->generate($commande->ref); !!}
                            </div>
                            <p class="merci">Merci de nous avoir fait confiance. À bientôt.</p>
                        </div>
