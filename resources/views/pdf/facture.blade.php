@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script  src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,7 +20,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet"  href="{{ asset('css/app.css') }}">
 
     <style>
         #loader {
@@ -82,7 +82,7 @@
                                <tbody>
                                <tr>
                                    <td  >
-                                       <img class="about-ent-logo" alt="" src="data:image/jpg;base64,{{ base64_encode(@file_get_contents(asset( $commande->profile_photo_path !== null ? 'storage/public/'. $commande->profile_photo_path : 'images/larangular.png'))) }}"/>
+                                       <img class="about-ent-logo" alt="" src="data:image/jpg;base64,{{ base64_encode(@file_get_contents(asset('images/larangular.png'))) }}"/>
                                        <h4 class="about-ent-name" >{{ $commande->user->name}}</h4>
                                        <h6 > IFU {{ $commande->user->ifu}}</h6>
                                    </td>
