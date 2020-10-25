@@ -21,11 +21,18 @@ class DatabaseSeeder extends Seeder
     {
 //         An user for test :
 
-//         User::factory(1)->create([
-//             'name' => 'My Company',
-//             'email' => 'a.an@yoo.com',
-//             'password' => bcrypt('amen2000'),
-//         ]);
+         User::factory(1)->create([
+             'name' => 'Larangular Inc',
+             'email' => 'a.an@yoo.com',
+             'password' => bcrypt('amen2000'),
+             'profile_photo_path' => null,
+             'tel' => "62 62 62 62",
+             'ifu' => 32000700015618,
+             'devise' => 'FCFA',
+             'tva' => 18,
+             'ref' => "LAI",
+             'adr' => 'Agla',
+         ]);
 
 //         For testing datas :
 
