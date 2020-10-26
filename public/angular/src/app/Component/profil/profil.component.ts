@@ -12,11 +12,13 @@ import * as b from '../../Module/biblio'
 export class ProfilComponent implements OnInit {
 
   profil:Profil = null
+
   modal = {
     id: null,
     title: null,
     ref:null,
   }
+
   btn :HTMLElement
 
   constructor(private request:RequeteService ) { }
@@ -26,7 +28,6 @@ export class ProfilComponent implements OnInit {
     this.request.getUserAbout().then((result:DataModel) => {
       // @ts-ignore
       this.profil =  result.data
-      b.s(result.data)
       this.btn = <HTMLElement>document.querySelector('#triggerModal')
     })
 
