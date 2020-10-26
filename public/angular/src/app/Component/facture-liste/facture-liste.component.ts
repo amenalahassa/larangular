@@ -26,7 +26,6 @@ export class FactureListeComponent implements OnInit {
     this.request.getFactures().then((result) => {
       this.factures = result
     })
-
   }
 
 
@@ -62,5 +61,10 @@ export class FactureListeComponent implements OnInit {
 
   abs(number: number) {
     return Math.abs(number)
+  }
+
+  getmonnaie (facture: Facture)
+  {
+    return facture.monnaie  - (facture.ssTotal + facture.tva)
   }
 }
