@@ -210,7 +210,8 @@
 
         <!-- ### $App Screen Footer ### -->
         <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
-            <span>Copyright © 2019 <a href="{{route('home')}}" title="Larangular">Larangular</a>. Made by <a target='_blank' href="https://bit.ly/31HHNy2" title="autor">Amen ALAHASSA</a>. All rights reserved.</span>
+            <p style="display: inline-block; margin: 0; padding: 0;">Copyright © 2019 <a href="{{route('home')}}" title="Larangular">Larangular</a>.</p>
+            <p style="display: inline-block; margin: 0; padding: 0;"> Made by <a target='_blank' href="https://bit.ly/31HHNy2" title="autor">Amen ALAHASSA</a>. All rights reserved.</p>
         </footer>
     </div>
 </div>
